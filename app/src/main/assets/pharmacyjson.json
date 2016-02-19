@@ -1,0 +1,3393 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.745448039845,
+                    1.33360651849805
+                ]
+            },
+            "properties": {
+                "name": "Jurong Community Hospital Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.704452354649,
+                    1.34046990469285
+                ]
+            },
+            "properties": {
+                "name": "Jurong Medical Centre Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.842392847024,
+                    1.27559653152779
+                ]
+            },
+            "properties": {
+                "name": "jw compounding pharmacy pte ltd",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.837853340818,
+                    1.42387794161228
+                ]
+            },
+            "properties": {
+                "name": "Khoo Teck Puat Hospital Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.846649751622,
+                    1.31044886405032
+                ]
+            },
+            "properties": {
+                "name": "KK Emergency Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.846649751622,
+                    1.31044886405032
+                ]
+            },
+            "properties": {
+                "name": "KK Outpatient Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.860887546152,
+                    1.30829495124721
+                ]
+            },
+            "properties": {
+                "name": "MEDILINK PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.855290510872,
+                    1.31011250668797
+                ]
+            },
+            "properties": {
+                "name": "MOHAMED MUSTAFA  SAMSUDDIN CO  PTE LTD MUSTAFA CENTRE",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.837581060248,
+                    1.34180523924523
+                ]
+            },
+            "properties": {
+                "name": "Mount Alvernia Hospital Main Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.835439020381,
+                    1.30516555109938
+                ]
+            },
+            "properties": {
+                "name": "Mount Elizabeth Hospital",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.84422593581,
+                    1.32214688889346
+                ]
+            },
+            "properties": {
+                "name": "MOUNT ELIZABETH NOVENA HOSPITAL PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.837581060248,
+                    1.34180523924523
+                ]
+            },
+            "properties": {
+                "name": "MT ALVERNIA HOSPITAL RETAIL PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.856507783818,
+                    1.30906503880247
+                ]
+            },
+            "properties": {
+                "name": "MUSTAFA PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.883348479874,
+                    1.38158988765444
+                ]
+            },
+            "properties": {
+                "name": "National Addiction Management Services NAMS Clinic Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.836531239995,
+                    1.27929123728884
+                ]
+            },
+            "properties": {
+                "name": "NATIONAL CANCER CENTRE PHARMACY LEVEL 1",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.836531239995,
+                    1.27929123728884
+                ]
+            },
+            "properties": {
+                "name": "NATIONAL CANCER CENTRE PHARMACY LEVEL 3",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.847181706012,
+                    1.37231892627306
+                ]
+            },
+            "properties": {
+                "name": "National Healthcare Group Pharmacy Ang Mo Kio",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.765476433341,
+                    1.31248332663102
+                ]
+            },
+            "properties": {
+                "name": "National Healthcare Group Pharmacy Clementi",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.84595374079,
+                    1.37193902687242
+                ]
+            },
+            "properties": {
+                "name": "National Healthcare Group Pharmacy FMCAng Mo Kio",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.730717538287,
+                    1.34972012427173
+                ]
+            },
+            "properties": {
+                "name": "National Healthcare Group Pharmacy Jurong",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.858956120771,
+                    1.33448061696844
+                ]
+            },
+            "properties": {
+                "name": "National Healthcare Group Pharmacy Toa Payoh",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.775212599402,
+                    1.43089355474119
+                ]
+            },
+            "properties": {
+                "name": "National Healthcare Group Pharmacy Woodlands",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.835954103139,
+                    1.27863294436842
+                ]
+            },
+            "properties": {
+                "name": "National Heart Centre Singapore",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.831757586657,
+                    1.29380268430163
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Great World City",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.795350116615,
+                    1.31025575504907
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Holland Village",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.893661284995,
+                    1.37231219790189
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Hougang Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.746876808629,
+                    1.33491791912617
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd IMM",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.845702900532,
+                    1.27573601504817
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd International Plaza",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.743284229271,
+                    1.33322926507641
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Jem",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.848477300829,
+                    1.35023976063032
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Junction 8",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.706460562461,
+                    1.3398304813913
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Jurong Point",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.853348977565,
+                    1.28022801945368
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Marina Bay Financial Centre",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.857007011272,
+                    1.29145560053916
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Marina Square",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.871861299452,
+                    1.35067584757268
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd NEX",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.834675809414,
+                    1.30242451242882
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Ngee Ann City",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.835776172341,
+                    1.42969881483597
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Northpoint",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.843850309973,
+                    1.31996782664877
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Novena Square",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.784083694934,
+                    1.29277466029259
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd OneKentridge",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.835239986677,
+                    1.30372355700719
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Paragon",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.90511326612,
+                    1.30119164805591
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Parkway Parade",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.852768006244,
+                    1.2937606193237
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Raffles City",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.819812109462,
+                    1.25644559680723
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Resort World Sentosa",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.944257975639,
+                    1.35270013788684
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Tampines Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.847965102671,
+                    1.33297594889812
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Toa Payoh HDB Hub",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.843462860732,
+                    1.31733497586944
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd United Square",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.821808304148,
+                    1.2643950142418
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Vivo City",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.749021657469,
+                    1.3501894913547
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd West Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.831394811962,
+                    1.3040361163016
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Ion Orchard",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.722829101001,
+                    1.3310246987918
+                ]
+            },
+            "properties": {
+                "name": "West Point Hospital Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.002906471979,
+                    1.37602367113475
+                ]
+            },
+            "properties": {
+                "name": "WESTMEAD PHARMACY PTE LTD",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.85212785671,
+                    1.28385732280102
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Clifford Centre 2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.894979710012,
+                    1.39209448261046
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Compass Point",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.988750653329,
+                    1.35519127651738
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Departure Lounge South T2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.98970692723,
+                    1.36249134124078
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Departure Transit Lounge East",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.98970692723,
+                    1.36249134124078
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Departure Transit West T1",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.988750653329,
+                    1.35519127651738
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy DepartureCheck In Hall North",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.988750653329,
+                    1.35519127651738
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy DepartureTransit Lounge North Terminal 2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.9530241759,
+                    1.34270652158061
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Eastpoint Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.849961398122,
+                    1.29142741705427
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Funan IT Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.820073899059,
+                    1.3075793458709
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Gleneagles",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.831757586657,
+                    1.29380268430163
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Great World City",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.885079594507,
+                    1.35949698068264
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy H205",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.820050690105,
+                    1.26401326698071
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Harbourfront Centre",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.795350116615,
+                    1.31025575504907
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Holland Shopping Centre",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.85091414942,
+                    1.28136393781576
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Hong Leong Building",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.893661284995,
+                    1.37231219790189
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Hougang Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.746876808629,
+                    1.33491791912617
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy IMM2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.831394811962,
+                    1.3040361163016
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy ION",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.78584029856,
+                    1.31756230169077
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Jelita",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.743284229271,
+                    1.33322926507641
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy JEM",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.705367385995,
+                    1.33939777004624
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Jurong Point 2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.876152346055,
+                    1.30222211442982
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Kallang Leisure Park 2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.905014610597,
+                    1.30523505267814
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Katong Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.862767318222,
+                    1.30737784524972
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Lavender MRT Station",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.744950063395,
+                    1.3850686963394
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy LOT 1",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.857505726276,
+                    1.2833433457807
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Marina Bay Sands",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.835439020381,
+                    1.30516555109938
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Mount Elizabeth",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.835776172341,
+                    1.42969881483597
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Northpoint",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.84422593581,
+                    1.32214688889346
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Novena Hospital",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.843850309973,
+                    1.31996782664877
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Novena Square",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.829351877514,
+                    1.30756270506172
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Orchard Towers",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.835239986677,
+                    1.30372355700719
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Paragon",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.90511326612,
+                    1.30119164805591
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Parkway Parade",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.957951404596,
+                    1.36893322016878
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Pasir Ris Drive 6",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.844991265288,
+                    1.30011779205995
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Plaza Singapura",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.852768006244,
+                    1.2937606193237
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Raffles City",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.851453076931,
+                    1.28422166556131
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Raffles Place MRT 3",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.876067336941,
+                    1.39139338968013
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Seletar Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.865452328442,
+                    1.36414355176526
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Serangoon Garden",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.871861299452,
+                    1.35067584757268
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Serangoon NEX",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.788214213273,
+                    1.30684915910832
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Star Vista",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.819461781077,
+                    1.44822686246165
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Sun Plaza 2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.857413653545,
+                    1.29469095352796
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Suntec City",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.834675809414,
+                    1.30242451242882
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Takashimaya S C ",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.944257975639,
+                    1.35270013788684
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Tampines Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.944837973457,
+                    1.35364691556976
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Tampines MRT",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.82385247394,
+                    1.30484377820879
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Tanglin Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.830838559122,
+                    1.35465312053947
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Thomson Plaza",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.826934757243,
+                    1.28646378923479
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Tiong Bahru Plaza",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.847965102671,
+                    1.33297594889812
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Toa Payoh Blk 190",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.843462860732,
+                    1.31733497586944
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy United Square 2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.821808304148,
+                    1.2643950142418
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Vivo City",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.749021657469,
+                    1.3501894913547
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy West Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.949596282368,
+                    1.3723728829627
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy White Sands Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.932005964806,
+                    1.37210150752725
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy WRS",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.747329400229,
+                    1.39712918895532
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Yew Tee MRT",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.846476140438,
+                    1.32708519248448
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Zhongsan Park",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.840171790623,
+                    1.38427949730029
+                ]
+            },
+            "properties": {
+                "name": "Healing Hub  Ang Mo Kio  Thye Hua Kwan Hospital",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.845388685436,
+                    1.32171632001032
+                ]
+            },
+            "properties": {
+                "name": "Johns Hopkins Singapore International Medical Centre Pte Ltd",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.845388685436,
+                    1.32171632001032
+                ]
+            },
+            "properties": {
+                "name": "Johns Hopkins Singapore International Medical Centre Pte Ltd Inpatient Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.849042775203,
+                    1.31945842114619
+                ]
+            },
+            "properties": {
+                "name": "NATIONAL SKIN CENTRE S PTE LTD PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.782651121732,
+                    1.29583443431445
+                ]
+            },
+            "properties": {
+                "name": "National University Hosital  Kent Ridge Wing Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.782651121732,
+                    1.29583443431445
+                ]
+            },
+            "properties": {
+                "name": "NATIONAL UNIVERSITY HOSPITAL S PTE LTD  HOSPITAL PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.782651121732,
+                    1.29583443431445
+                ]
+            },
+            "properties": {
+                "name": "NATIONAL UNIVERSITY HOSPITAL S PTE LTD  RETAIL PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.784083694934,
+                    1.29277466029259
+                ]
+            },
+            "properties": {
+                "name": "National University Hospital s Pte Ltd Pharmacy  NCIS",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.784083694934,
+                    1.29277466029259
+                ]
+            },
+            "properties": {
+                "name": "NATIONAL UNIVERSITY HOSPITALS PTE LTD MEDICAL CENTRE PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.745448039845,
+                    1.33360651849805
+                ]
+            },
+            "properties": {
+                "name": "Ng Teng Fong General Hospital Outpatient  Retail Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.747821940427,
+                    1.35201550181494
+                ]
+            },
+            "properties": {
+                "name": "NHG Pharmacy Bukit Batok Polyclinic",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.750776554335,
+                    1.38234172175921
+                ]
+            },
+            "properties": {
+                "name": "NHG Pharmacy CCK Polyclinic",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.888996067947,
+                    1.3700183792577
+                ]
+            },
+            "properties": {
+                "name": "NHG Pharmacy Hougang",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.838333084462,
+                    1.4265378393095
+                ]
+            },
+            "properties": {
+                "name": "NHG Pharmacy Yishun",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.8315500557,
+                    1.30648414953721
+                ]
+            },
+            "properties": {
+                "name": "Nishino Pharmacy Shaw Centre",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.834675809414,
+                    1.30242451242882
+                ]
+            },
+            "properties": {
+                "name": "Nishino Pharmacy Takashimaya",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.744950063395,
+                    1.3850686963394
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare  The Living Pharmacy LT1",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.82385247394,
+                    1.30484377820879
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare  The Living Pharmacy TMA",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.945019133637,
+                    1.35431589681104
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare  The Living Pharmacy TPO",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.830838559122,
+                    1.35465312053947
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare  The Living Pharmacy TSP",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.801126620302,
+                    1.27367691268976
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare ARC",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.763993627281,
+                    1.38054278294057
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare BPP",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.77858510566,
+                    1.33863197617319
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare BTP",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.764422730697,
+                    1.31489653340761
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare CMA",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.820050690105,
+                    1.26401326698071
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare HBF",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.893661284995,
+                    1.37231219790189
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare HLC",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.879449934843,
+                    1.37566761414395
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare HPT",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.706460562461,
+                    1.3398304813913
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare JRP",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.907176895097,
+                    1.30133780117445
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare MPR",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.871861299452,
+                    1.35067584757268
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare NMA",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.844991265288,
+                    1.30011779205995
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare PSG",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.826934757243,
+                    1.28646378923479
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare TBR",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.944257975639,
+                    1.35270013788684
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare TPM",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.786619290428,
+                    1.43507822640489
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare WCC",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.835217852613,
+                    1.41698349909758
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare YSH",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.848398901342,
+                    1.36924925067539
+                ]
+            },
+            "properties": {
+                "name": "NTUC Healthcare The Living Pharmacy AMK",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.831757586657,
+                    1.29380268430163
+                ]
+            },
+            "properties": {
+                "name": "NTUC HealthcareThe Living Pharmacy GWC",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.872750382497,
+                    1.30384361092921
+                ]
+            },
+            "properties": {
+                "name": "NTUC Unity Healthcare KWM Kallang Wave Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.82907328572,
+                    1.30689746745833
+                ]
+            },
+            "properties": {
+                "name": "ORCHARD PHARMACY PTE LTD",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.827036191889,
+                    1.30637308352904
+                ]
+            },
+            "properties": {
+                "name": "P  L Pharmacy Pte Ltd",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.729608952373,
+                    1.34902214750218
+                ]
+            },
+            "properties": {
+                "name": "Pacific Truste Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.841149827003,
+                    1.30125762855738
+                ]
+            },
+            "properties": {
+                "name": "AM Pharmacy Pte Ltd",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.964635286942,
+                    1.36706667336694
+                ]
+            },
+            "properties": {
+                "name": "ALCHEMY PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.002906471979,
+                    1.37602367113475
+                ]
+            },
+            "properties": {
+                "name": "ALPS PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.845873003098,
+                    1.28289707597269
+                ]
+            },
+            "properties": {
+                "name": "Amber Compounding Pharmacy Pte Ltd",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.949294059471,
+                    1.34068507397428
+                ]
+            },
+            "properties": {
+                "name": "CGH Pharmacy B",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.838314726985,
+                    1.27933180152647
+                ]
+            },
+            "properties": {
+                "name": "Child Guidance Clinic Health Promotion Board",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.883348479874,
+                    1.38158988765444
+                ]
+            },
+            "properties": {
+                "name": "Clinic B Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.77858510566,
+                    1.33863197617319
+                ]
+            },
+            "properties": {
+                "name": "COMMUNITY PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.84852639057,
+                    1.34870169782482
+                ]
+            },
+            "properties": {
+                "name": "E+MED PTE LTD",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.843851678382,
+                    1.28549560494578
+                ]
+            },
+            "properties": {
+                "name": "Essentials Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.853919068251,
+                    1.31268300764837
+                ]
+            },
+            "properties": {
+                "name": "Farrer Park Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.819596821351,
+                    1.30743410141082
+                ]
+            },
+            "properties": {
+                "name": "GLENEAGLES HOSPITAL",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.751530955816,
+                    1.34973995249983
+                ]
+            },
+            "properties": {
+                "name": "GRACE HEALTHCARE",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.943709404271,
+                    1.35240268469447
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy  Tampines Century Square 2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.83824627393,
+                    1.30100690983516
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy 313  Somerset",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.801537039659,
+                    1.44036400825182
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Admiralty",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.843470416519,
+                    1.27458855756224
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Amara Hotel",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.847230395752,
+                    1.37040745176451
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Ang Mo Kio 3",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.850553148346,
+                    1.32440589229241
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Balestier Medical Center",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.931818849155,
+                    1.32460738560574
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Bedok Central",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.92926733213,
+                    1.32477241235591
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Bedok Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.848477300829,
+                    1.35023976063032
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Bishan Place",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.855327629254,
+                    1.29906832321849
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Bugis Junction 3",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.855614435415,
+                    1.30026502404042
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Bugis MRT",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.763993627281,
+                    1.38054278294057
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Bukit Panjang Plaza",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.78562416421,
+                    1.43614826757687
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Causeway Point",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.96238898156,
+                    1.33432548753363
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Changi City Point",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.84469676644,
+                    1.28499917190011
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Chinatown Point 4",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.85417317893,
+                    1.29277806730408
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy City Link",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.85648678636,
+                    1.31139382772351
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy City Square Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.764422730697,
+                    1.31489653340761
+                ]
+            },
+            "properties": {
+                "name": "Guardian Pharmacy Clementi Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.908756535788,
+                    1.31508857010071
+                ]
+            },
+            "properties": {
+                "name": "PARKWAY EAST HOSPITAL PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.949294059471,
+                    1.34068507397428
+                ]
+            },
+            "properties": {
+                "name": "Pharmacy A Changi General Hospital",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.883348479874,
+                    1.38158988765444
+                ]
+            },
+            "properties": {
+                "name": "Pharmacy Services Centre  NHG Blk 9",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.949294059471,
+                    1.34068507397428
+                ]
+            },
+            "properties": {
+                "name": "PharmacyIB  CGH The Integrated Building",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.82393672436,
+                    1.3031516767874
+                ]
+            },
+            "properties": {
+                "name": "Pharmaplus Pte Ltd",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.854494863584,
+                    1.30145333010784
+                ]
+            },
+            "properties": {
+                "name": "PHARMED IMPORT  EXPORT PTE LTD",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.763539224436,
+                    1.32518173990054
+                ]
+            },
+            "properties": {
+                "name": "Princeton Pharmacy S Pte Ltd",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.857243398006,
+                    1.30114363644659
+                ]
+            },
+            "properties": {
+                "name": "Raffles Hospital Inpatient Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.833999075958,
+                    1.27854259052528
+                ]
+            },
+            "properties": {
+                "name": "SGH Retail Pharmacy Blk 4",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.833999075958,
+                    1.27854259052528
+                ]
+            },
+            "properties": {
+                "name": "Singapore General Hospital Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.835809053645,
+                    1.28104819489497
+                ]
+            },
+            "properties": {
+                "name": "SINGAPORE NATIONAL EYE CENTRE PTE LTD",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.816992082118,
+                    1.28369297416465
+                ]
+            },
+            "properties": {
+                "name": "Singhealth Poly  Bukit Merah",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.887165721374,
+                    1.31949398988998
+                ]
+            },
+            "properties": {
+                "name": "Singhealth Poly  Geylang",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.959197679532,
+                    1.36858736096578
+                ]
+            },
+            "properties": {
+                "name": "Singhealth Poly  Pasir Ris",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.893905782928,
+                    1.39278592553328
+                ]
+            },
+            "properties": {
+                "name": "Singhealth Poly  Sengkang",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.945849141431,
+                    1.35731028879448
+                ]
+            },
+            "properties": {
+                "name": "Singhealth Poly  Tampines",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.931546373105,
+                    1.32597857853183
+                ]
+            },
+            "properties": {
+                "name": "SINGHEALTH POLYBEDOK",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.838314726985,
+                    1.27933180152647
+                ]
+            },
+            "properties": {
+                "name": "SINGHEALTH POLYOUTRAM",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.800957472969,
+                    1.29847581399093
+                ]
+            },
+            "properties": {
+                "name": "SINGHEALTH POLYQUEENSTOWN",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.858181592709,
+                    1.33093967266564
+                ]
+            },
+            "properties": {
+                "name": "SMITH PHARMACY PTE LTD",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.791792331833,
+                    1.30381648723933
+                ]
+            },
+            "properties": {
+                "name": "Specialist Compounding Pharmacy Pte Ltd",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.948759109312,
+                    1.34177666604133
+                ]
+            },
+            "properties": {
+                "name": "ST ANDREWS COMMUNITY HOSPITAL PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.741877298694,
+                    1.34953640327505
+                ]
+            },
+            "properties": {
+                "name": "ST LUKES HOSPITAL BLOCK A",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.847454235881,
+                    1.31958617042601
+                ]
+            },
+            "properties": {
+                "name": "Tan Tock Seng Hospital CDC Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.845388685436,
+                    1.32171632001032
+                ]
+            },
+            "properties": {
+                "name": "Tan Tock Seng Hospital Outpatient  Retail Pharmacy",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.845388685436,
+                    1.32171632001032
+                ]
+            },
+            "properties": {
+                "name": "Tan Tock Seng Hospital Pharmacy Level 2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.845388685436,
+                    1.32171632001032
+                ]
+            },
+            "properties": {
+                "name": "TAN TOCK SENG HOSPITAL PTE LTD EMERGENCY PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.845388685436,
+                    1.32171632001032
+                ]
+            },
+            "properties": {
+                "name": "TAN TOCK SENG HOSPITAL PTE LTD MAIN PHARMACY",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.838232154871,
+                    1.27975936282351
+                ]
+            },
+            "properties": {
+                "name": "The Dental Pharm",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.81592933403,
+                    1.33066234200872
+                ]
+            },
+            "properties": {
+                "name": "The Japanese Association Clinic Singapore",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.841448134686,
+                    1.32536440372975
+                ]
+            },
+            "properties": {
+                "name": "Thomson Medical Centre",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.871861299452,
+                    1.35067584757268
+                ]
+            },
+            "properties": {
+                "name": "TSP Serious About Skin NEX",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.90511326612,
+                    1.30119164805591
+                ]
+            },
+            "properties": {
+                "name": "TSP Serious About Skin PP",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.985169322651,
+                    1.35437107131465
+                ]
+            },
+            "properties": {
+                "name": "UNITY AT3",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.931546373105,
+                    1.32597857853183
+                ]
+            },
+            "properties": {
+                "name": "UNITY BDK",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.817611319653,
+                    1.28306745872288
+                ]
+            },
+            "properties": {
+                "name": "UNITY BMC",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.849691661171,
+                    1.3488887715675
+                ]
+            },
+            "properties": {
+                "name": "UNITY BSH Bishan",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.9530241759,
+                    1.34270652158061
+                ]
+            },
+            "properties": {
+                "name": "UNITY ESP",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.743284229271,
+                    1.33322926507641
+                ]
+            },
+            "properties": {
+                "name": "UNITY JEM",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.894480202638,
+                    1.31469247358936
+                ]
+            },
+            "properties": {
+                "name": "UNITY OKM OneKM",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.91289012849,
+                    1.39425663179497
+                ]
+            },
+            "properties": {
+                "name": "UNITY PGP",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.901557702327,
+                    1.38493234914015
+                ]
+            },
+            "properties": {
+                "name": "UNITY RVP",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.876067336941,
+                    1.39139338968013
+                ]
+            },
+            "properties": {
+                "name": "UNITY SMA",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.720267696275,
+                    1.33504236197649
+                ]
+            },
+            "properties": {
+                "name": "UNITY TMJ",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.847420624091,
+                    1.33267904288528
+                ]
+            },
+            "properties": {
+                "name": "UNITY TP2",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.843005330506,
+                    1.27623842130745
+                ]
+            },
+            "properties": {
+                "name": "UNITY TPG",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.742762944892,
+                    1.33415832822196
+                ]
+            },
+            "properties": {
+                "name": "UNITY WGA",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.749021657469,
+                    1.3501894913547
+                ]
+            },
+            "properties": {
+                "name": "UNITY WM1",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.949596282368,
+                    1.3723728829627
+                ]
+            },
+            "properties": {
+                "name": "UNITY WSA",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.746557744034,
+                    1.39730223288023
+                ]
+            },
+            "properties": {
+                "name": "UNITY YTP",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.865498996032,
+                    1.32428135435113
+                ]
+            },
+            "properties": {
+                "name": "VERTEX PHARMACY PTE LTD",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.833844256856,
+                    1.30455070869468
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Store Pte Ltd Lucky Plaza",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.931967259779,
+                    1.32550118811547
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Bedok Central",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.92926733213,
+                    1.32477241235591
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Bedok Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.855327629254,
+                    1.29906832321849
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Bugis Junction",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.763993627281,
+                    1.38054278294057
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Bukit Panjang Plaza",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.78562416421,
+                    1.43614826757687
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Causeway Point",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.985169322651,
+                    1.35437107131465
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Changi Airport T3 Basement",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.985169322651,
+                    1.35437107131465
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Changi Airport T3 Check in Hall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.985169322651,
+                    1.35437107131465
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Changi Airport Terminal 3 Transit North",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.985169322651,
+                    1.35437107131465
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Changi Airport Terminal 3 Transit",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.764422730697,
+                    1.31489653340761
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Clementi Mall",
+                "description": "\n"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    103.894979710012,
+                    1.39209448261046
+                ]
+            },
+            "properties": {
+                "name": "Watsons Personal Care Stores Pte Ltd Compass Point",
+                "description": "\n"
+            }
+        }
+    ]
+}
