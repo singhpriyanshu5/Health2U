@@ -7,9 +7,35 @@
    >
     <!-- The main content view -->
     <FrameLayout
-        android:id="@+id/content_frame"
+        android:id="@+id/content_frame0"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content_frame"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        <FrameLayout
+            android:id="@+id/content_frame2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"/>
+        <FrameLayout
+            android:id="@+id/content_frame3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"/>
+        </LinearLayout>
+    </FrameLayout>
+
+        
+
     <!-- The navigation drawer -->
     <ListView android:id="@+id/left_drawer"
 

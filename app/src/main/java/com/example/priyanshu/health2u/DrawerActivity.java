@@ -23,6 +23,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.google.android.gms.appindexing.Action;
@@ -37,6 +39,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.parse.Parse;
 import com.parse.ParseFacebookUtils;
@@ -51,7 +54,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallback,
-        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,LocationListener {
+        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,LocationListener,GoogleMap.OnMarkerClickListener {
 
     private String[] mTitles;
     private DrawerLayout mDrawerLayout;
@@ -69,6 +72,8 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
     private GoogleApiClient mGoogleApiClient;
     private GoogleApiClient client;
     private LocationRequest mLocationRequest;
+    private TextFragment tf;
+    private FrameLayout text_part;
 
 
     @Override
@@ -248,7 +253,10 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
                 newLocation.setLongitude(arr[1]);
 
                 float dist = newLocation.distanceTo(mLastLocation)/1000;
-                if(dist<5) {
+                if(dist<3) {
+
+                    map.setOnMarkerClickListener(this);
+
                     map.addMarker(new MarkerOptions()
                             .position(new LatLng(arr[0], arr[1]))
                             .title(name));
@@ -333,6 +341,20 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
         }
     }
 
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        String title=marker.getTitle();
+        tf.setTextTv(title);
+        if(text_part.getVisibility()== View.GONE) {
+            text_part.setVisibility(View.VISIBLE);
+        }
+        return false;
+    }
+
+    public void open_details(View view) {
+        Intent intent = new Intent(this, ClinicDetail.class);
+        startActivity(intent);
+    }
 
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -357,9 +379,20 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
                 mMapFragment = MapFragment.newInstance();
                 FragmentTransaction fragmentTransaction =
                         getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.content_frame, mMapFragment);
+                fragmentTransaction.replace(R.id.content_frame2, mMapFragment);
                 fragmentTransaction.commit();
                 mMapFragment.getMapAsync(DrawerActivity.this);
+                tf = new TextFragment();
+                android.app.FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame3, tf)
+                        .commit();
+                LinearLayout linearLayout = (LinearLayout)findViewById(R.id.linear);
+                linearLayout.setVisibility(linearLayout.VISIBLE);
+                FrameLayout fl = (FrameLayout)findViewById(R.id.content_frame);
+                fl.setVisibility(View.GONE);
+                text_part = (FrameLayout) findViewById(R.id.content_frame3);
+                text_part.setVisibility(View.GONE);
                 break;
             case 1:
                 fragment = new BookingFragment();
@@ -376,6 +409,10 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, fragment)
                     .commit();
+            LinearLayout linearLayout = (LinearLayout)findViewById(R.id.linear);
+            linearLayout.setVisibility(View.GONE);
+            FrameLayout fl = (FrameLayout)findViewById(R.id.content_frame);
+            fl.setVisibility(View.VISIBLE);
         }
 
         // Highlight the selected item, update the title, and close the drawer
