@@ -1,18 +1,23 @@
 package com.example.priyanshu.health2u;
 
 
+import android.Manifest;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,14 +27,31 @@ import android.widget.ListView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.parse.Parse;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
 import com.parse.ui.ParseLoginBuilder;
 
-public class DrawerActivity extends AppCompatActivity {
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallback,
+        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,LocationListener {
 
     private String[] mTitles;
     private DrawerLayout mDrawerLayout;
@@ -38,11 +60,15 @@ public class DrawerActivity extends AppCompatActivity {
     CharSequence mDrawerTitle;
     Toolbar app_toolbar;
     private ActionBarDrawerToggle mDrawerToggle;
+    private Location mLastLocation;
+    private double user_lat,user_long;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
+    private GoogleApiClient mGoogleApiClient;
     private GoogleApiClient client;
+    private LocationRequest mLocationRequest;
 
 
     @Override
@@ -60,6 +86,20 @@ public class DrawerActivity extends AppCompatActivity {
             ParseLoginBuilder builder = new ParseLoginBuilder(this);
             startActivityForResult(builder.build(), 0);
         }
+
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+        }
+
+        // Create the LocationRequest object
+        mLocationRequest = LocationRequest.create()
+                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                .setInterval(10 * 1000)        // 10 seconds, in milliseconds
+                .setFastestInterval(1 * 1000); // 1 second, in milliseconds
 
         mTitle = mDrawerTitle = getTitle();
         mTitles = new String[]{"Map Booking", "View Booking", "Settings"};
@@ -182,6 +222,119 @@ public class DrawerActivity extends AppCompatActivity {
         client.disconnect();
     }
 
+    @Override
+    public void onMapReady(GoogleMap map) {
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(user_lat, user_long), 14.0f));
+
+        try {
+            Log.v("xxx", String.valueOf(user_lat));
+            JSONObject obj = new JSONObject(loadJSONFromAsset());
+            JSONArray features_arr = obj.getJSONArray("features");
+//            ArrayList<HashMap<String, String>> formList = new ArrayList<HashMap<String, String>>();
+//            HashMap<String, String> m_li;
+
+            for (int i = 0; i < features_arr.length(); i++) {
+                JSONObject j_obj = features_arr.getJSONObject(i);
+                JSONObject geometry_obj = j_obj.getJSONObject("geometry");
+                JSONArray coordinates_arr = geometry_obj.getJSONArray("coordinates");
+                JSONObject properties_obj = j_obj.getJSONObject("properties");
+                String name = properties_obj.getString("name");
+                double arr[] = new double[2];
+                arr[0] = coordinates_arr.getDouble(1);
+                arr[1] = coordinates_arr.getDouble(0);
+
+                Location newLocation = new Location("newLocation");
+                newLocation.setLatitude(arr[0]);
+                newLocation.setLongitude(arr[1]);
+
+                float dist = newLocation.distanceTo(mLastLocation)/1000;
+                if(dist<5) {
+                    map.addMarker(new MarkerOptions()
+                            .position(new LatLng(arr[0], arr[1]))
+                            .title(name));
+                }
+
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public String loadJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = this.getAssets().open("clinicsjson.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                mGoogleApiClient);
+        if (mLastLocation != null) {
+            user_lat = mLastLocation.getLatitude();
+            user_long = mLastLocation.getLongitude();
+
+        }else{
+            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+
+        }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        mLastLocation=location;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (mGoogleApiClient.isConnected()) {
+            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+            mGoogleApiClient.disconnect();
+        }
+    }
+
+
+
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
 
         @Override
@@ -206,7 +359,7 @@ public class DrawerActivity extends AppCompatActivity {
                         getFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.content_frame, mMapFragment);
                 fragmentTransaction.commit();
-             //   mMapFragment.getMapAsync(getApplicationContext());
+                mMapFragment.getMapAsync(DrawerActivity.this);
                 break;
             case 1:
                 fragment = new BookingFragment();
