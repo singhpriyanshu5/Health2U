@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.priyanshu.health2u.ViewBooking"
+    android:orientation="vertical">
+<!--<TextView android:layout_height="wrap_content"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:text="Current Bookings"-->
+    <!--android:background="#003A94"-->
+    <!--android:textSize="26sp"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:textColor="#FFF"/>-->
+        <TextView android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Past Bookings"
+        android:background="#003A94"
+        android:textSize="26sp"
+        android:paddingLeft="10dp"
+        android:textColor="#FFF"/>
+    <LinearLayout
+        android:id="@+id/l0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/clinic_current"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RafflesMedical"
+            android:textSize="20sp"
+            android:paddingBottom="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:text="Time : "/>
+            <TextView
+                android:id="@+id/tv_current_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="10:20"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Date : "/>
+            <TextView
+                android:layout_width="0dp"
+                android:id="@+id/tv_current_date"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="25/02/16"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/clinic_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RafflesMedical"
+            android:textSize="20sp"
+            android:paddingBottom="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:text="Time : "/>
+            <TextView
+                android:id="@+id/tv_time_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="10:20"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Date : "/>
+            <TextView
+                android:id="@+id/tv_date_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:text="25/02/16"/>
+        </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/clinic2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RafflesMedical"
+                android:textSize="20sp"
+                android:paddingBottom="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:text="Time : "/>
+                <TextView
+                    android:id="@+id/tv_time_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="10:20"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Date : "/>
+                <TextView
+                    android:id="@+id/tv_date_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:text="25/02/16"/>
+            </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/l3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/clinic3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RafflesMedical"
+                    android:textSize="20sp"
+                    android:paddingBottom="10dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:text="Time : "/>
+                    <TextView
+                        android:id="@+id/tv_time_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="10:20"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Date : "/>
+                    <TextView
+                        android:id="@+id/tv_date_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:text="25/02/16"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+

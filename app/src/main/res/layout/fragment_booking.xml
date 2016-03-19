@@ -4,10 +4,79 @@
     android:layout_height="match_parent"
     tools:context="com.example.priyanshu.health2u.BookingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello Booking Fragment" />
+        android:orientation="vertical"
+        tools:context="com.example.priyanshu.health2u.ViewBooking2">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#003A94"
+                android:paddingLeft="10dp"
+                android:text="Current Bookings"
+                android:textColor="#FFF"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="No Data available"
+                android:id="@+id/current_nodata"
+                android:visibility="gone"/>
+
+            <ListView
+                android:id="@+id/lv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp">
+
+            </ListView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#003A94"
+                android:paddingLeft="10dp"
+                android:text="Past Bookings"
+                android:textColor="#FFF"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="No Data available"
+                android:id="@+id/past_nodata"
+                android:visibility="gone"/>
+
+            <ListView
+                android:id="@+id/lv_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"></ListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
 
 </FrameLayout>

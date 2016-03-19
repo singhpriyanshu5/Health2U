@@ -7,13 +7,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="4"
         android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:src="@drawable/health_logo" />
 
         <TextView
@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:text="One stop services for your healthcare\n necessities"
             android:textSize="16sp" />
@@ -34,7 +34,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="6"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -87,11 +87,16 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
             android:background="@android:color/transparent"
             android:textAllCaps="false"
             android:text="Forgot your password? Click Here"
-            android:id="@+id/parse_login_help"/>
+            android:id="@+id/parse_login_help"
+
+            />
+
+
 
         <include layout="@layout/com_parse_ui_parse_login_form" />
 

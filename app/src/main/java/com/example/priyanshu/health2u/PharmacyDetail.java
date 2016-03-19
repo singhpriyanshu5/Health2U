@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-public class ClinicDetail extends AppCompatActivity {
+public class PharmacyDetail extends AppCompatActivity {
     private String title,m_address,m_city;
     TextView tv_address;
     @Override
