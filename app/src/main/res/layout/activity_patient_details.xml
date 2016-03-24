@@ -56,7 +56,230 @@
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
         android:layout_marginTop="7dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/initial_frame">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Have you booked with us before?"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter full name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/full_name_et"
+        />
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Load personal details"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:onClick="loadDetails"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        />
 
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Enter personal details"
+        android:onClick="enterDetails"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/load_details">
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name: "
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NRIC/Passport: "
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/nric_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact: "
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/contact_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email: "
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/email_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date of birth: "
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/dob_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/extra_et_load"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="Write Down anything we need to know about your condition"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:layout_gravity="bottom"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#FFF"
+                    android:onClick="SubmitDetails"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/enter_details"
+        android:visibility="gone"
+        >
     <LinearLayout
         android:paddingLeft="10dp"
         android:layout_width="match_parent"
@@ -83,6 +306,7 @@
                 android:hint="First Name"
                 />
             <EditText
+                android:id="@+id/last_name_et"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:hint="Family Name"
@@ -100,12 +324,14 @@
                 android:hint="NRIC/Passport no."
                 />
             <EditText
+                android:id="@+id/contact_et"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:hint="Contact no."
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <EditText
+            android:id="@+id/email_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -123,6 +349,7 @@
                 android:layout_height="wrap_content"
                 android:text="Date of birth"/>
             <EditText
+                android:id="@+id/dob_day_et"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="DD"
@@ -130,12 +357,14 @@
                 android:inputType="number"
                 />
             <EditText
+                android:id="@+id/dob_month_et"
                 android:layout_width="wrap_content"
                 android:hint="MM"
                 android:layout_weight="1"
                 android:inputType="number"
                 android:layout_height="wrap_content" />
             <EditText
+                android:id="@+id/dob_year_et"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:hint="YYYY"
@@ -143,27 +372,32 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-    </LinearLayout>
-    <EditText
-        android:paddingLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:hint="Write Down anything we need to know about your condition"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <Button
+        <EditText
+            android:id="@+id/extra_et_enter"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Write Down anything we need to know about your condition"/>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Submit"
-            android:layout_gravity="bottom"
-            android:background="@color/colorPrimary"
-            android:textColor="#FFF"
-            android:onClick="SubmitDetails"
-            />
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:onClick="SubmitDetails"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
+</FrameLayout>
+
+
 </LinearLayout>

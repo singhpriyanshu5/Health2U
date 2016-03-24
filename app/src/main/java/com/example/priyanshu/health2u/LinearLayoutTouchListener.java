@@ -20,15 +20,17 @@ public class LinearLayoutTouchListener implements View.OnTouchListener {
     private TextFragment mtf;
     static final int MIN_DISTANCE = 100;// TODO change this runtime based on screen resolution. for 1920x1080 is to small the 100 distance
     private float downX, downY, upX, upY;
+    private String username;
 
     // private MainActivity mMainActivity;
 
-    public LinearLayoutTouchListener(TextFragment tf, boolean isPharmacies, String address, String city) {
+    public LinearLayoutTouchListener(TextFragment tf, boolean isPharmacies, String address, String city,String user_name) {
         m_isPharmacies=isPharmacies;
         m_address=address;
         m_city=city;
         mtf=tf;
         activity = tf.getActivity();
+        username = user_name;
     }
 
     public void onRightToLeftSwipe() {
@@ -67,6 +69,7 @@ public class LinearLayoutTouchListener implements View.OnTouchListener {
         intent.putExtra("title",title);
         intent.putExtra("address", m_address);
         intent.putExtra("city",m_city);
+        intent.putExtra("user_name",username);
         activity.startActivity(intent);
     }
 

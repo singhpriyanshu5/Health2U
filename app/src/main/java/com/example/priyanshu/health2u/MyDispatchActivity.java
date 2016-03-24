@@ -8,7 +8,7 @@ import com.parse.ui.ParseLoginDispatchActivity;
 public class MyDispatchActivity extends ParseLoginDispatchActivity {
     @Override
     protected Class<?> getTargetClass() {
-        return DrawerActivity.class;
+        return UserNavigation.class;
     }
 
 }

@@ -1,34 +1,32 @@
 package com.example.priyanshu.health2u;
 
-
 import android.Manifest;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.Configuration;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -55,7 +53,8 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Locale;
 
-public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallback,
+
+public class UserNavigation extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener, GoogleMap.OnMarkerClickListener {
 
     private static boolean isPharmacies=false;
@@ -64,8 +63,8 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
     private ListView mDrawerList;
     CharSequence mTitle;
     CharSequence mDrawerTitle;
-    Toolbar app_toolbar;
-    private ActionBarDrawerToggle mDrawerToggle;
+    Toolbar toolbar;
+    private android.support.v4.app.ActionBarDrawerToggle mDrawerToggle;
     private Location mLastLocation;
     private double user_lat, user_long;
     private boolean isOrigiin = false;
@@ -83,81 +82,47 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
 
     private FloatingActionButton fab =null;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_user_navigation);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        setContentView(R.layout.toolbar_drawer);
-        app_toolbar = (Toolbar) findViewById(R.id.toolbar);
-        app_toolbar.setTitle(R.string.app_name);
-        setSupportActionBar(app_toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_drawer);
         Intent intent = getIntent();
-//        if (ParseUser.getCurrentUser() == null) {
-//            ParseLoginBuilder builder = new ParseLoginBuilder(this);
-//            startActivityForResult(builder.build(), 0);
-//        }
-
 
         if(ParseUser.getCurrentUser()!=null) {
             current_user_name = ParseUser.getCurrentUser().getString("name");
-            Log.d("DrawerActivity","Enter nameeeeeeeeeeeeeee");
         }
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DrawerActivity.this, ClinicSearch.class);
+                Intent i = new Intent(UserNavigation.this, ClinicSearch.class);
                 startActivity(i);
             }
         });
 
-        mTitle = mDrawerTitle = getTitle();
-        mTitles = new String[]{"Nearest Clinics", "Nearest Pharmacies","View Bookings", "Settings"};
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerToggle = new ActionBarDrawerToggle(
-                this,                  /* host Activity */
-                mDrawerLayout,         /* DrawerLayout object */
-                R.drawable.ic_drawer,  /* nav drawer icon to replace 'Up' caret */
-                R.string.drawer_open,  /* "open drawer" description */
-                R.string.drawer_close  /* "close drawer" description */
-        ) {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
 
-            /**
-             * Called when a drawer has settled in a completely closed state.
-             */
-            public void onDrawerClosed(View view) {
-                super.onDrawerClosed(view);
-                getActionBar().setTitle(mTitle);
-            }
-
-            /**
-             * Called when a drawer has settled in a completely open state.
-             */
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                getActionBar().setTitle(mDrawerTitle);
-            }
-        };
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        // Set the adapter for the list view
-        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, mTitles));
-        // Set the list's click listener
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View nav_header = navigationView.inflateHeaderView(R.layout.nav_header_user_navigation);
+        TextView tv_user_name = (TextView)nav_header.findViewById(R.id.nav_user_name);
+        tv_user_name.setText(current_user_name);
+        navigationView.setNavigationItemSelectedListener(this);
 
         isOrigiin = intent.getBooleanExtra("origin", false);
         if (isOrigiin == true) {
             //selectItem(1);
+            toolbar.setTitle("Bookings list");
             Fragment fragment = new BookingFragment();
             Bundle bundle = new Bundle();
-            Log.d("DrawerActivity", "user: " + current_user_name);
             bundle.putString("user_name", current_user_name);
             fragment.setArguments(bundle);
             getFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
@@ -166,6 +131,7 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
             FrameLayout fl = (FrameLayout) findViewById(R.id.content_frame);
             fl.setVisibility(View.VISIBLE);
             Log.d("DrawerActivity", "origin is true");
+
             fab.hide();
         }
 
@@ -191,17 +157,19 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        //ParseFacebookUtils.onActivityResult(requestCode, resultCode, data);
-
-
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.user_navigation, menu);
         return true;
     }
 
@@ -212,12 +180,8 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-
         //noinspection SimplifiableIfStatement
-        if (id == R.id.logout) {
+        if (id == R.id.action_logout) {
             ParseUser.logOut();
             //finish();
 //            Parse.initialize(this);
@@ -225,7 +189,7 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
 //            ParseLoginBuilder builder = new ParseLoginBuilder(this);
 //            startActivityForResult(builder.build(), 0);
             finish();
-            Intent i = new Intent(DrawerActivity.this, SplashActivity.class);
+            Intent i = new Intent(UserNavigation.this, SplashActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
             return true;
@@ -368,7 +332,7 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
             user_lat = mLastLocation.getLatitude();
             user_long = mLastLocation.getLongitude();
             if(!isOrigiin)
-            setMapFragment();
+                setMapFragment();
 
 
         }else{
@@ -445,16 +409,6 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
         return false;
     }
 
-
-
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-
-        @Override
-        public void onItemClick(AdapterView parent, View view, int position, long id) {
-            selectItem(position);
-        }
-    }
-
     public void setMapFragment(){
         fab.show();
         MapFragment mMapFragment;
@@ -463,57 +417,71 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
                 getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.content_frame2, mMapFragment);
         fragmentTransaction.commit();
-        mMapFragment.getMapAsync(DrawerActivity.this);
+        mMapFragment.getMapAsync(UserNavigation.this);
         tf = new TextFragment();
         android.app.FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.content_frame3, tf)
                 .commit();
         LinearLayout linearLayout = (LinearLayout)findViewById(R.id.linear);
-        linearLayout.setVisibility(linearLayout.VISIBLE);
+        linearLayout.setVisibility(View.VISIBLE);
         FrameLayout fl = (FrameLayout)findViewById(R.id.content_frame);
         fl.setVisibility(View.GONE);
         text_part = (FrameLayout) findViewById(R.id.content_frame3);
         text_part.setVisibility(View.GONE);
         ActionBar actionBar = getSupportActionBar();
         if(!isPharmacies) {
-            actionBar.setTitle("Nearest Clinics");
+            toolbar.setTitle("Nearest Clinics");
         }else{
-            actionBar.setTitle("Nearest Pharmacies");
+            toolbar.setTitle("Nearest Pharmacies");
         }
     }
 
-    /**
-     * Swaps fragments in the main content view
-     */
-    private void selectItem(int position) {
-        // Create a new fragment and specify the planet to show based on position
+
+
+
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
         Fragment fragment = null;
+        int position=-1;
 
+        if (id == R.id.nav_nearest_clinics) {
+            isPharmacies=false;
+            setMapFragment();
+            position=0;
+        } else if (id == R.id.nav_nearest_pharmacies) {
+            isPharmacies=true;
+            setMapFragment();
+            position=1;
 
-        switch (position) {
-            case 0:
-                isPharmacies=false;
-               setMapFragment();
-                break;
-            case 1:
-                isPharmacies=true;
-                setMapFragment();
-                break;
-            case 2:
-                fragment = new BookingFragment();
-                Bundle bundle = new Bundle();
-                Log.d("DrawerActivity", "user: " + current_user_name);
-                bundle.putString("user_name", current_user_name);
-                fragment.setArguments(bundle);
-                break;
-            case 3:
-                fragment = new SettingsFragment();
-                break;
+        } else if (id == R.id.nav_view_bookings) {
+
+            fragment = new BookingFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("user_name", current_user_name);
+            fragment.setArguments(bundle);
+            toolbar.setTitle("Bookings list");
+
+        }else if (id == R.id.nav_queue) {
+            fragment = new QueueFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("user_name", current_user_name);
+            fragment.setArguments(bundle);
+            toolbar.setTitle("View Queues");
+
+        } else if (id == R.id.nav_settings) {
+            fragment = new SettingsFragment();
+            toolbar.setTitle("Settings");
+
+        }  else if (id == R.id.nav_send) {
 
         }
 
-        // Insert the fragment by replacing any existing fragment
         if(position!=0 && position!=1) {
             fab.hide();
             android.app.FragmentManager fragmentManager = getFragmentManager();
@@ -526,30 +494,16 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
             fl.setVisibility(View.VISIBLE);
         }
 
-        // Highlight the selected item, update the title, and close the drawer
-        mDrawerList.setItemChecked(position, true);
-        setTitle(mTitles[position]);
 
-        mDrawerLayout.closeDrawer(mDrawerList);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
-    @Override
-    public void setTitle(CharSequence title) {
-        mTitle = title;
-        getSupportActionBar().setTitle(mTitle);
-    }
+//    @Override
+//    public void setTitle(CharSequence title) {
+//        mTitle = title;
+//        getSupportActionBar().setTitle(mTitle);
+//    }
 
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        // Sync the toggle state after onRestoreInstanceState has occurred.
-        mDrawerToggle.syncState();
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        // Pass any configuration change to the drawer toggls
-        mDrawerToggle.onConfigurationChanged(newConfig);
-    }
 }

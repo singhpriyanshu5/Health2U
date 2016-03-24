@@ -23,16 +23,16 @@ import java.util.List;
 /**
  * Created by priyanshu on 12/3/2016.
  */
-public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
+public class CustomQueueAdapter extends BaseAdapter implements View.OnClickListener {
 
     private Activity activity;
     private Fragment fragment;
     private ArrayList data;
     private static LayoutInflater inflater=null;
     public Resources res;
-    ListModel tempValues=null;
+    ListModelQueue tempValues=null;
     int i=0;
-    public CustomAdapter(Fragment f, ArrayList d,Resources resLocal) {
+    public CustomQueueAdapter(Fragment f, ArrayList d,Resources resLocal) {
 
         /********** Take passed values **********/
         fragment = f;
@@ -52,19 +52,23 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
         return data.size();
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
+
     public static class ViewHolder{
 
         public TextView clinic_name;
-        public TextView time_text;
-        public TextView date_text;
+        public TextView current_queue_tv;
+        public TextView your_queue_tv;
         public ImageView img_cancel;
-
     }
 
 
     @Override
     public Object getItem(int position) {
-     return null;
+        return null;
     }
 
     @Override
@@ -80,16 +84,15 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
         if(convertView==null){
 
             /****** Inflate tabitem.xml file for each row ( Defined below ) *******/
-            vi = inflater.inflate(R.layout.list_item, null);
+            vi = inflater.inflate(R.layout.list_item_queue, null);
 
             /****** View Holder Object to contain tabitem.xml file elements ******/
 
             holder = new ViewHolder();
             holder.clinic_name = (TextView) vi.findViewById(R.id.clinic_name);
-            holder.time_text=(TextView)vi.findViewById(R.id.time_text);
-            holder.date_text=(TextView)vi.findViewById(R.id.date_text);
+            holder.current_queue_tv = (TextView) vi.findViewById(R.id.current_tv);
+            holder.your_queue_tv=(TextView)vi.findViewById(R.id.your_tv);
             holder.img_cancel = (ImageView)vi.findViewById(R.id.img_cancel);
-            /************  Set holder with LayoutInflater ************/
             vi.setTag( holder );
         }
         else
@@ -97,40 +100,42 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
 
         if(data.size()<=0)
         {
-            holder.clinic_name.setText("No Data");
-            holder.time_text.setText("No Data");
-            holder.date_text.setText("No Data");
+            holder.clinic_name.setText("No data");
+            holder.current_queue_tv.setText("No Data");
+            holder.your_queue_tv.setText("No Data");
 
         }
         else
         {
             /***** Get each Model object from Arraylist ********/
             tempValues=null;
-            tempValues = ( ListModel ) data.get( position );
+            tempValues = ( ListModelQueue ) data.get( position );
             final String objectId = tempValues.getObjectId();
-            Log.d("CustomAdapter", "id" + objectId);
+
             /************  Set Model values in Holder elements ***********/
 
             holder.clinic_name.setText( tempValues.getClinic_name() );
-            holder.time_text.setText(tempValues.getTime_text());
-            holder.date_text.setText(tempValues.getDate_text());
+
+            holder.your_queue_tv.setText(String.valueOf(tempValues.getYour_queue()));
+            holder.current_queue_tv.setText(String.valueOf(tempValues.getCurrent_queue()));
+
             holder.img_cancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     data.remove(position);
                     notifyDataSetChanged();
-                    ParseQuery query = new ParseQuery("booking");
+                    ParseQuery query = new ParseQuery("queue");
                     query.whereEqualTo("objectId", objectId);
                     query.findInBackground(new FindCallback<ParseObject>() {
-                        public void done(List<ParseObject> bookingList, ParseException e) {
+                        public void done(List<ParseObject> queuelist, ParseException e) {
                             if (e == null) {
-                                Log.d("CustomAdapter", "Retrieved " + bookingList.size() + " booking objects");
-                                for (int i = 0; i < bookingList.size(); i++) {
-                                    ParseObject tempTest = bookingList.get(i);
+                                Log.d("CustomQueueAdapter", "Retrieved " + queuelist.size() + " queue objects");
+                                for (int i = 0; i < queuelist.size(); i++) {
+                                    ParseObject tempTest = queuelist.get(i);
                                     tempTest.deleteInBackground();
                                 }
                             } else {
-                                Log.d("CustomAdapter", "Error: " + e.getMessage());
+                                Log.d("CustomQueueAdapter", "Error: " + e.getMessage());
                             }
                         }
                     });
@@ -159,9 +164,9 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
         public void onClick(View arg0) {
 
 
-              BookingFragment bookingFragment = (BookingFragment)fragment;
+            QueueFragment queueFragment = (QueueFragment)fragment;
 
-              bookingFragment.onItemClick(mPosition);
+            queueFragment.onItemClick(mPosition);
 
 //            ViewBooking2 sct = (ViewBooking2)activity;
 //
@@ -172,8 +177,4 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
     }
 
 
-    @Override
-    public void onClick(View v) {
-
-    }
 }

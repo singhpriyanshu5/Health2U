@@ -51,7 +51,7 @@ public class ViewBooking2 extends AppCompatActivity {
 
                         }
                         Log.d("bookings",CustomArr.toString());
-                        adapter = new CustomAdapter(ViewBooking2.this, CustomArr, res);
+                       // adapter = new CustomAdapter(ViewBooking2.this, CustomArr, res);
                         list.setAdapter(adapter);
                     } else {
                         Log.d("booking", "Error: " + e.getMessage());

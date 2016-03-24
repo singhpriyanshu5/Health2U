@@ -77,6 +77,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
+            android:clickable="true"
+            android:onClick="openQueueActivity"
             >
         <Button
             android:layout_width="48dp"

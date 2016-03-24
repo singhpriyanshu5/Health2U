@@ -8,6 +8,15 @@ public class ListModel {
     private String time_text="";
     private String date_text="";
     private String objectId="";
+    private String patient_name="";
+
+    public String getPatient_name() {
+        return patient_name;
+    }
+
+    public void setPatient_name(String patient_name) {
+        this.patient_name = patient_name;
+    }
 
     public String getObjectId() {
         return objectId;

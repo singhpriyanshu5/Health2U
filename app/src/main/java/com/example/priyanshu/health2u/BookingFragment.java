@@ -2,6 +2,7 @@ package com.example.priyanshu.health2u;
 
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,7 +28,7 @@ import java.util.List;
 public class BookingFragment extends Fragment {
 
     private TextView tv_current, tv_past;
-    private String user_name;
+    private String user_name,patient_name;
     private Resources res;
     ListView list,list2;
     CustomAdapter adapter,adapter2;
@@ -63,17 +64,18 @@ public class BookingFragment extends Fragment {
                     if (bookingList != null) {
                         if(bookingList.size()>0) {
                             for (int i = 0; i < bookingList.size(); i++) {
+                                String patient_name = bookingList.get(i).getString("patient_name");
                                 String clinic_name = bookingList.get(i).getString("clinic_name");
                                 String time_text = bookingList.get(i).getString("timeText");
                                 String date_text = bookingList.get(i).getString("dateText");
                                 String objectId = bookingList.get(i).getObjectId();
-                                CustomArr.add(setListData(clinic_name, time_text, date_text, objectId));
+                                CustomArr.add(setListData(patient_name,clinic_name, time_text, date_text, objectId));
 
                                 /**************** Create Custom Adapter *********/
 
                             }
                             Log.d("bookings", CustomArr.toString());
-                            adapter = new CustomAdapter(getActivity(), CustomArr, res);
+                            adapter = new CustomAdapter(BookingFragment.this, CustomArr, res);
                             list.setAdapter(adapter);
                         }else{
                             tv_current.setVisibility(View.VISIBLE);
@@ -99,16 +101,17 @@ public class BookingFragment extends Fragment {
                                            if (bookingList != null) {
                                                if(bookingList.size()>0) {
                                                    for (int i = 0; i < bookingList.size(); i++) {
+                                                       String patient_name = bookingList.get(i).getString("patient_name");
                                                        String clinic_name = bookingList.get(i).getString("clinic_name");
                                                        String time_text = bookingList.get(i).getString("timeText");
                                                        String date_text = bookingList.get(i).getString("dateText");
                                                        String objectId = bookingList.get(i).getObjectId();
                                                        Log.d("bookings", "id is " + objectId);
-                                                       CustomArr2.add(setListData(clinic_name, time_text, date_text, objectId));
+                                                       CustomArr2.add(setListData(patient_name,clinic_name, time_text, date_text, objectId));
 
                                                    }
                                                    Log.d("bookings", CustomArr2.toString());
-                                                   adapter2 = new CustomAdapter(getActivity(), CustomArr2, res);
+                                                   adapter2 = new CustomAdapter(BookingFragment.this, CustomArr2, res);
                                                    list2.setAdapter(adapter2);
                                                }else{
                                                     tv_past.setVisibility(View.VISIBLE);
@@ -125,11 +128,12 @@ public class BookingFragment extends Fragment {
             return rootView;
         }
 
-    public ListModel setListData(String clinic_name, String time_text, String date_text, String objectId)
+    public ListModel setListData(String patient_name, String clinic_name, String time_text, String date_text, String objectId)
     {
         final ListModel sched = new ListModel();
 
         /******* Firstly take data in model object ******/
+        sched.setPatient_name(patient_name);
         sched.setClinic_name(clinic_name);
         sched.setTime_text(time_text);
         sched.setDate_text(date_text);
@@ -141,6 +145,15 @@ public class BookingFragment extends Fragment {
     {
         ListModel tempValues = CustomArr.get(mPosition);
 
+
+        Intent i = new Intent(getActivity(), BookingDetails.class);
+//        i.putExtra("patient_name", tempValues.getPatient_name());
+//        i.putExtra("clinic_name", tempValues.getClinic_name());
+//        i.putExtra("time_text", tempValues.getTime_text());
+//        i.putExtra("date_text", tempValues.getDate_text());
+        i.putExtra("isAdmin", false);
+        i.putExtra("objectId", tempValues.getObjectId());
+        startActivity(i);
 
         // SHOW ALERT
 

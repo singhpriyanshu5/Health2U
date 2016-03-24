@@ -3,7 +3,6 @@ package com.example.priyanshu.health2u;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,13 +29,10 @@ public class AdminLogin extends AppCompatActivity {
         clinic_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ParseQuery<ParseObject> query = ParseQuery.getQuery("Clinic");
+                ParseQuery<ParseObject> query = ParseQuery.getQuery("usernameToClinic");
                 final String clinic_username = username.getText().toString();
                 final String clinic_password = password.getText().toString();
-                Log.d("AdminLogin", "xxxxxxxxxx" + clinic_username);
-                Log.d("AdminLogin", "yyyyyyyyyy" + clinic_password);
-
-                query.whereEqualTo("name", clinic_username);
+                query.whereEqualTo("clinic_username", clinic_username);
                 query.findInBackground(new FindCallback<ParseObject>() {
                     @Override
                     public void done(List<ParseObject> objects, ParseException e) {
@@ -44,7 +40,11 @@ public class AdminLogin extends AppCompatActivity {
                             if (objects != null) {
                                 String correct_pass = objects.get(0).getString("password");
                                 if (correct_pass.equals(clinic_password)) {
-                                    Intent i = new Intent(AdminLogin.this, AdminActivity.class);
+                                    Intent i = new Intent(AdminLogin.this, AdminNavigation.class);
+                                    String clinic_name = objects.get(0).getString("clinic_name");
+                                    String clinic_address = objects.get(0).getString("clinic_address");
+                                    i.putExtra("clinic_address", clinic_address);
+                                    i.putExtra("clinic_name",clinic_name);
                                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                     startActivity(i);
                                     finish();

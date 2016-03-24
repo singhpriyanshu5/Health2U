@@ -9,38 +9,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-
 import java.util.ArrayList;
-import java.util.List;
 
-/**
- * Created by priyanshu on 12/3/2016.
- */
-public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
+
+public class CustomAdminAdapter extends BaseAdapter implements View.OnClickListener {
 
     private Activity activity;
     private Fragment fragment;
     private ArrayList data;
     private static LayoutInflater inflater=null;
     public Resources res;
-    ListModel tempValues=null;
+    ListModelAdmin tempValues=null;
     int i=0;
-    public CustomAdapter(Fragment f, ArrayList d,Resources resLocal) {
+    public CustomAdminAdapter(Fragment f , ArrayList d,Resources resLocal) {
 
-        /********** Take passed values **********/
         fragment = f;
         activity = f.getActivity();
         data=d;
         res = resLocal;
 
-        /***********  Layout inflator to call external xml layout () ***********/
         inflater = ( LayoutInflater )activity.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -54,17 +43,16 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
 
     public static class ViewHolder{
 
-        public TextView clinic_name;
+        public TextView patient_name;
         public TextView time_text;
         public TextView date_text;
-        public ImageView img_cancel;
 
     }
 
 
     @Override
     public Object getItem(int position) {
-     return null;
+        return null;
     }
 
     @Override
@@ -80,16 +68,14 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
         if(convertView==null){
 
             /****** Inflate tabitem.xml file for each row ( Defined below ) *******/
-            vi = inflater.inflate(R.layout.list_item, null);
+            vi = inflater.inflate(R.layout.list_item_admin, null);
 
             /****** View Holder Object to contain tabitem.xml file elements ******/
 
             holder = new ViewHolder();
-            holder.clinic_name = (TextView) vi.findViewById(R.id.clinic_name);
+            holder.patient_name = (TextView) vi.findViewById(R.id.patient_name);
             holder.time_text=(TextView)vi.findViewById(R.id.time_text);
             holder.date_text=(TextView)vi.findViewById(R.id.date_text);
-            holder.img_cancel = (ImageView)vi.findViewById(R.id.img_cancel);
-            /************  Set holder with LayoutInflater ************/
             vi.setTag( holder );
         }
         else
@@ -97,7 +83,7 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
 
         if(data.size()<=0)
         {
-            holder.clinic_name.setText("No Data");
+            holder.patient_name.setText("No Data");
             holder.time_text.setText("No Data");
             holder.date_text.setText("No Data");
 
@@ -106,37 +92,14 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
         {
             /***** Get each Model object from Arraylist ********/
             tempValues=null;
-            tempValues = ( ListModel ) data.get( position );
+            tempValues = ( ListModelAdmin ) data.get( position );
             final String objectId = tempValues.getObjectId();
             Log.d("CustomAdapter", "id" + objectId);
-            /************  Set Model values in Holder elements ***********/
 
-            holder.clinic_name.setText( tempValues.getClinic_name() );
+            holder.patient_name.setText( tempValues.getPatient_name() );
             holder.time_text.setText(tempValues.getTime_text());
             holder.date_text.setText(tempValues.getDate_text());
-            holder.img_cancel.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    data.remove(position);
-                    notifyDataSetChanged();
-                    ParseQuery query = new ParseQuery("booking");
-                    query.whereEqualTo("objectId", objectId);
-                    query.findInBackground(new FindCallback<ParseObject>() {
-                        public void done(List<ParseObject> bookingList, ParseException e) {
-                            if (e == null) {
-                                Log.d("CustomAdapter", "Retrieved " + bookingList.size() + " booking objects");
-                                for (int i = 0; i < bookingList.size(); i++) {
-                                    ParseObject tempTest = bookingList.get(i);
-                                    tempTest.deleteInBackground();
-                                }
-                            } else {
-                                Log.d("CustomAdapter", "Error: " + e.getMessage());
-                            }
-                        }
-                    });
 
-                }
-            });
 
             /******** Set Item Click Listner for LayoutInflater for each row *******/
 
@@ -159,10 +122,8 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
         public void onClick(View arg0) {
 
 
-              BookingFragment bookingFragment = (BookingFragment)fragment;
-
-              bookingFragment.onItemClick(mPosition);
-
+              AdminBookingFragment adminBookingFragment = (AdminBookingFragment)fragment;
+              adminBookingFragment.onItemClick(mPosition);
 //            ViewBooking2 sct = (ViewBooking2)activity;
 //
 //            /****  Call  onItemClick Method inside CustomListViewAndroidExample Class ( See Below )****/
@@ -177,3 +138,4 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
 
     }
 }
+

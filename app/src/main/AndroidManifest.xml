@@ -57,10 +57,7 @@
         <activity
             android:name=".DrawerActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -90,7 +87,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PharmacyDetail"></activity>
+        <activity android:name=".PharmacyDetail" />
+        <activity
+            android:name=".AdminNavigation"
+            android:label="@string/title_activity_admin_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UserNavigation"
+            android:label="UserNavigation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".BookingDetails" />
+        <activity android:name=".QueueActivity" />
+        <activity android:name=".QueueDetails"></activity>
     </application>
 
 </manifest>

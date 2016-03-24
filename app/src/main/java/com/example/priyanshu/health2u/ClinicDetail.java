@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class ClinicDetail extends AppCompatActivity {
-    private String title,m_address,m_city;
+    private String title,m_address,m_city,user_name;
     TextView tv_address;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class ClinicDetail extends AppCompatActivity {
         title = intent.getStringExtra("title");
         m_address = intent.getStringExtra("address");
         m_city = intent.getStringExtra("city");
+        user_name = intent.getStringExtra("user_name");
         tv_address.setText(m_address + " " + m_city);
         actionBar.setTitle(title);
     }
@@ -47,5 +48,12 @@ public class ClinicDetail extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void openQueueActivity(View view) {
+        Intent intent = new Intent(this, QueueActivity.class);
+        intent.putExtra("clinic_name",title);
+        intent.putExtra("user_name", user_name);
+        startActivity(intent);
     }
 }

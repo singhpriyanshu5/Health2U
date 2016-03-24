@@ -9,4 +9,8 @@
     <string name="drawer_open">Open Drawer</string>
     <string name="drawer_close">close drawer</string>
     <string name="title_activity_view_booking2">ViewBooking2</string>
+    <string name="title_activity_admin_navigation">AdminNavigation</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
