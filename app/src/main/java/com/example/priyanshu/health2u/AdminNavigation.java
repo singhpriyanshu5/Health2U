@@ -90,6 +90,8 @@ public class AdminNavigation extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
+            Intent i = new Intent(AdminNavigation.this, SplashActivity.class);
+            startActivity(i);
             finish();
             return true;
         }

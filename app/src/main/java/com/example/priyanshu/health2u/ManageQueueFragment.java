@@ -28,7 +28,7 @@ import java.util.List;
  */
 public class ManageQueueFragment extends Fragment {
 
-    TextView current_queue_tv,patient_name_tv,nric_tv;
+    TextView current_queue_tv,patient_name_tv,nric_tv, clinic_name_tv;
     String clinic_name;
     View rootView;
     int current_queue_no;
@@ -52,7 +52,9 @@ public class ManageQueueFragment extends Fragment {
 
         rootView =  inflater.inflate(R.layout.fragment_manage_queue, container, false);
 
+        clinic_name_tv = (TextView)rootView.findViewById(R.id.clinic_name_tv);
         clinic_name = getArguments().getString("clinic_name");
+        clinic_name_tv.setText(clinic_name);
         current_queue_tv = (TextView)rootView.findViewById(R.id.current_queue_tv);
         patient_name_tv = (TextView)rootView.findViewById(R.id.patient_name_tv);
         next_number_btn = (Button) rootView.findViewById(R.id.next_number_btn);

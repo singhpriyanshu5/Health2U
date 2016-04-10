@@ -1,8 +1,10 @@
 package com.example.priyanshu.health2u;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -117,23 +119,8 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
             holder.img_cancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    data.remove(position);
-                    notifyDataSetChanged();
-                    ParseQuery query = new ParseQuery("booking");
-                    query.whereEqualTo("objectId", objectId);
-                    query.findInBackground(new FindCallback<ParseObject>() {
-                        public void done(List<ParseObject> bookingList, ParseException e) {
-                            if (e == null) {
-                                Log.d("CustomAdapter", "Retrieved " + bookingList.size() + " booking objects");
-                                for (int i = 0; i < bookingList.size(); i++) {
-                                    ParseObject tempTest = bookingList.get(i);
-                                    tempTest.deleteInBackground();
-                                }
-                            } else {
-                                Log.d("CustomAdapter", "Error: " + e.getMessage());
-                            }
-                        }
-                    });
+                    open(position,objectId);
+
 
                 }
             });
@@ -147,6 +134,63 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
         return vi;
 
     }
+
+    private void cancelBooking(int position, String objectId){
+        data.remove(position);
+        notifyDataSetChanged();
+        ParseQuery query = new ParseQuery("booking");
+        query.whereEqualTo("objectId", objectId);
+        query.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> bookingList, ParseException e) {
+                if (e == null) {
+                    Log.d("CustomAdapter", "Retrieved " + bookingList.size() + " booking objects");
+                    for (int i = 0; i < bookingList.size(); i++) {
+                        ParseObject tempTest = bookingList.get(i);
+                        tempTest.deleteInBackground();
+                    }
+                } else {
+                    Log.d("CustomAdapter", "Error: " + e.getMessage());
+                }
+            }
+        });
+    }
+
+    public void open(final int position, final String objectId){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(activity);
+        alertDialogBuilder.setIcon(R.drawable.doctor);
+        alertDialogBuilder.setMessage("Are you sure you want to cancel this booking?");
+        alertDialogBuilder.setTitle("Cancel booking");
+
+        alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+
+                doPositiveClick(position, objectId);            }
+        });
+
+        alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+    }
+
+    public void doPositiveClick(int position, String objectId) {
+        // Do stuff here.
+
+        cancelBooking(position, objectId);
+//        Intent intent = new Intent(PatientDetails.this, DrawerActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+//        intent.putExtra("origin", true);
+//        startActivity(intent);
+//        finish();
+    }
+
+
 
     private class MyItemClickListener  implements View.OnClickListener {
         private int mPosition;

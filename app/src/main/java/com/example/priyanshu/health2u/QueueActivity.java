@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.parse.FindCallback;
@@ -30,6 +31,7 @@ public class QueueActivity extends AppCompatActivity {
     private Button get_queue_no;
     private String patient_name,user_name,nric;
     private FrameLayout queue_frame,frame_initial;
+    RelativeLayout loadingPanel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,8 @@ public class QueueActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("Queue Status");
         setContentView(R.layout.activity_queue);
+        loadingPanel = (RelativeLayout)findViewById(R.id.loadingPanel);
+
         final int[] random_estimated_time ={10,20,30,40,50};
 
         Random rand = new Random();
@@ -59,6 +63,7 @@ public class QueueActivity extends AppCompatActivity {
         get_queue_no.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                loadingPanel.setVisibility(View.VISIBLE);
                 Log.d("QueueActivity", "vvvvvvvvvvvvvv inside stuff");
                 patient_name = name_et.getText().toString();
                 nric = nric_et.getText().toString();
@@ -69,7 +74,7 @@ public class QueueActivity extends AppCompatActivity {
                     public void done(List<ParseObject> objects, ParseException e) {
                         if (e == null) {
                             if (objects.size() > 0) {
-
+                                loadingPanel.setVisibility(View.GONE);
                                 user_name = getIntent().getStringExtra("user_name");
                                 current_queue = objects.get(0).getInt("current_queue");
                                 latest_queue = objects.get(0).getInt("latest_queue");
@@ -95,7 +100,7 @@ public class QueueActivity extends AppCompatActivity {
                                 clinic_name_tv.setText(clinic_name);
                                 frame_initial.setVisibility(View.GONE);
                                 queue_frame.setVisibility(View.VISIBLE);
-                                Log.d("QueueActivity", "hhhhhhhhh"+String.valueOf(queue_frame.getVisibility()));
+                                Log.d("QueueActivity", "hhhhhhhhh" + String.valueOf(queue_frame.getVisibility()));
                                 ParseObject po = new ParseObject("queue");
                                 po.put("user_name", user_name);
                                 po.put("patient_name", patient_name);

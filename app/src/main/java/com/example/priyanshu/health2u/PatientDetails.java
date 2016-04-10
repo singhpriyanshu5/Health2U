@@ -1,6 +1,7 @@
 package com.example.priyanshu.health2u;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -164,7 +166,6 @@ public class PatientDetails extends AppCompatActivity {
                        for (int i = 0; i < objects.size(); i++) {
                            if (objects.get(i).getString("timeText").equals(timeText)) {
                                is_clash = true;
-                               Log.d("PatientDetails", "same time found");
                                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
                                String time_string="";
                                try {
@@ -173,12 +174,10 @@ public class PatientDetails extends AppCompatActivity {
                                    time.setTime(date);
                                    time.add(Calendar.MINUTE, 30);
                                    time_string  = String.format("%2d:%2d",time.get(Calendar.HOUR_OF_DAY),time.get(Calendar.MINUTE));
-                                   Log.d("PatientDetails", "vvvvvv"+time_string);
                                } catch (java.text.ParseException e1) {
                                    e1.printStackTrace();
                                }
                                open(time_string);
-                               Log.d("PatientDetails", "select from 3:30, 4:00 or 4:30");
                                break;
                            }
                        }
@@ -322,7 +321,16 @@ public class PatientDetails extends AppCompatActivity {
 
     }
 
+    private void hideKeyboard(){
+        InputMethodManager inputManager = (InputMethodManager)
+                getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
     public void loadDetails(View view) {
+        hideKeyboard();
         loadingPanel.setVisibility(View.VISIBLE);
         submit_button = (Button)findViewById(R.id.submit_button);
         extra_et = (EditText) findViewById(R.id.extra_et_load);

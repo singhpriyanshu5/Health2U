@@ -27,6 +27,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
@@ -71,6 +72,8 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
+
+    private RelativeLayout loadingPanel;
     private GoogleApiClient mGoogleApiClient;
     private GoogleApiClient client;
     private LocationRequest mLocationRequest;
@@ -138,6 +141,7 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
         setContentView(R.layout.activity_user_navigation);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        loadingPanel = (RelativeLayout)findViewById(R.id.loadingPanel);
 
         Intent intent = getIntent();
 
@@ -238,16 +242,20 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
+//            loadingPanel.setVisibility(View.VISIBLE);
+//            ProgressDialog dialog = ProgressDialog.show(UserNavigation.this, "",
+//                    "Logging out...", true);
             ParseUser.logOut();
             //finish();
 //            Parse.initialize(this);
             //        ParseFacebookUtils.initialize(this);
 //            ParseLoginBuilder builder = new ParseLoginBuilder(this);
 //            startActivityForResult(builder.build(), 0);
-            finish();
+//            finish();
             Intent i = new Intent(UserNavigation.this, SplashActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
+            finish();
             return true;
         }
 

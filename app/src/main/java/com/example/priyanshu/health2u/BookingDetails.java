@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.parse.FindCallback;
@@ -26,12 +27,15 @@ public class BookingDetails extends AppCompatActivity {
     private  String objectId,clinic_name, time_text, date_text, name, nric, contact, email, dob, extra, doctor;
     private boolean isAdmin=false;
     private FrameLayout frame_booking;
+    RelativeLayout loadingPanel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_details);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        loadingPanel = (RelativeLayout)findViewById(R.id.loadingPanel);
+        loadingPanel.setVisibility(View.VISIBLE);
         frame_booking = (FrameLayout)findViewById(R.id.frame_booking);
         clinic_name_tv = (TextView)findViewById(R.id.clinic_name_tv);
         time_text_tv = (TextView)findViewById(R.id.time_tv);
@@ -59,6 +63,7 @@ public class BookingDetails extends AppCompatActivity {
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null) {
                     if (objects.size() > 0) {
+
                         clinic_name = objects.get(0).getString("clinic_name");
                         time_text = objects.get(0).getString("timeText");
                         date_text = objects.get(0).getString("dateText");
@@ -78,6 +83,7 @@ public class BookingDetails extends AppCompatActivity {
                             public void done(List<ParseObject> objects, ParseException e) {
                                 if (e == null) {
                                     if (objects.size() > 0) {
+                                        loadingPanel.setVisibility(View.GONE);
                                         nric = objects.get(0).getString("nric");
                                         nric_tv.setText(nric);
                                         contact = objects.get(0).getString("contact");

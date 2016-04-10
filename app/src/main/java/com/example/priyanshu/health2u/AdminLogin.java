@@ -1,5 +1,6 @@
 package com.example.priyanshu.health2u;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -26,9 +27,12 @@ public class AdminLogin extends AppCompatActivity {
         final EditText password = (EditText)findViewById(R.id.clinic_password);
 
 
+
         clinic_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ProgressDialog dialog = ProgressDialog.show(AdminLogin.this, "",
+                        "Logging In...", true);
                 ParseQuery<ParseObject> query = ParseQuery.getQuery("usernameToClinic");
                 final String clinic_username = username.getText().toString();
                 final String clinic_password = password.getText().toString();

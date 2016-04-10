@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -20,7 +21,7 @@ import java.util.List;
 
 
 public class AdminBookingFragment extends Fragment {
-
+    RelativeLayout loadingPanel;
     private String clinic_name, isHistory;
     private Resources res;
     ListView list;
@@ -35,6 +36,8 @@ public class AdminBookingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_admin_booking, container, false);
+        loadingPanel = (RelativeLayout) rootView.findViewById(R.id.loadingPanel);
+        loadingPanel.setVisibility(View.VISIBLE);
         clinic_name = getArguments().getString("clinic_name");
         isHistory = getArguments().getString("isHistory");
         res =getResources();
@@ -52,6 +55,7 @@ public class AdminBookingFragment extends Fragment {
                                            if (e == null) {
                                                if (bookingList != null) {
                                                    if(bookingList.size()>0) {
+                                                       loadingPanel.setVisibility(View.GONE);
                                                        for (int i = 0; i < bookingList.size(); i++) {
                                                            String clinic_name = bookingList.get(0).getString("clinic_name");
                                                            String patient_name = bookingList.get(i).getString("patient_name");
@@ -91,6 +95,7 @@ public class AdminBookingFragment extends Fragment {
                                            if (e == null) {
                                                if (bookingList != null) {
                                                    if (bookingList.size() > 0) {
+                                                       loadingPanel.setVisibility(View.GONE);
                                                        for (int i = 0; i < bookingList.size(); i++) {
                                                            String clinic_name = bookingList.get(0).getString("clinic_name");
                                                            String patient_name = bookingList.get(i).getString("patient_name");

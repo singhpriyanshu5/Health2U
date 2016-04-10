@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#FFF"
+    android:orientation="vertical"
     tools:context="com.example.priyanshu.health2u.PatientDetails">
 
     <RelativeLayout
@@ -21,253 +21,268 @@
     </RelativeLayout>
 
     <TextView
-        android:paddingTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="26sp"
         android:id="@+id/tv1"
-        android:text="Raffles Medical"
-        android:gravity="center"/>
-
-    <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:textSize="18sp"
-        android:text="Time : "/>
-    <TextView
-        android:id="@+id/tv_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:gravity="left"
-        android:text="10:20"/>
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="18sp"
-        android:paddingLeft="15dp"
-        android:text="Date : "/>
-    <TextView
-        android:id="@+id/tv_date"
-        android:layout_width="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Raffles Medical"
+        android:textSize="26sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:gravity="left"
-        android:text="25/02/16"/>
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Time : "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="10:20"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:text="Date : "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="25/02/16"
+            android:textSize="18sp" />
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
-        android:layout_marginTop="7dp"/>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/initial_frame">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Have you booked with us before?"
-        android:gravity="center"
-        android:textSize="20sp"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter NRIC/Passport no."
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/load_nric_et"
-        android:imeOptions="actionDone"
-        />
-    <Button
-        android:layout_marginTop="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Load personal details"
-        android:textAllCaps="false"
-        android:background="@color/colorPrimary"
-        android:textColor="#FFF"
-        android:onClick="loadDetails"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="OR"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:layout_marginTop="5dp"
-        />
-
-    <Button
-        android:layout_marginTop="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Enter personal details"
-        android:onClick="enterDetails"
-        android:textAllCaps="false"
-        android:background="@color/colorPrimary"
-        android:textColor="#FFF"
-        />
-        </LinearLayout>
-    </FrameLayout>
+        android:layout_marginTop="7dp"
+        android:background="@android:color/darker_gray" />
 
     <FrameLayout
+        android:id="@+id/initial_frame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Have you booked with us before?"
+                android:textSize="20sp" />
 
+            <EditText
+                android:id="@+id/load_nric_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="Enter NRIC/Passport no."
+                android:imeOptions="actionDone" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:onClick="loadDetails"
+                android:text="Load personal details"
+                android:textAllCaps="false"
+                android:textColor="#FFF" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="OR"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:onClick="enterDetails"
+                android:text="Enter personal details"
+                android:textAllCaps="false"
+                android:textColor="#FFF" />
         </LinearLayout>
-
     </FrameLayout>
 
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
+
+
+        <!--</LinearLayout>-->
+
+    <!--</FrameLayout>-->
+
     <FrameLayout
-        android:visibility="gone"
+        android:id="@+id/load_details"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/load_details">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
 
         <LinearLayout
-            android:paddingLeft="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
-            android:layout_marginTop="10dp">
+            >
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:paddingLeft="10dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name: "
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/name_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="5dp"
-                >
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NRIC/Passport: "
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/nric_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="5dp"
-                >
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Contact: "
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/contact_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="5dp"
-                >
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email: "
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/email_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="5dp"
-                >
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date of birth: "
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/dob_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="5dp"
-                >
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Preffered Doctor: "
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
+
                 <Spinner
                     android:id="@+id/doctor_spinner"
                     android:layout_width="match_parent"
@@ -277,161 +292,167 @@
 
             <EditText
                 android:id="@+id/extra_et_load"
-                android:paddingLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:hint="Write Down anything we need to know about your condition"/>
+                android:hint="Write Down anything we need to know about your condition"
+                android:paddingLeft="10dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                >
+                android:layout_gravity="bottom">
 
                 <Button
                     android:id="@+id/submit_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Submit"
                     android:layout_gravity="bottom"
                     android:background="@color/colorPrimary"
-                    android:textColor="#FFF"
-                    />
+                    android:text="Submit"
+                    android:textColor="#FFF" />
 
             </LinearLayout>
 
 
-
         </LinearLayout>
-
 
 
     </FrameLayout>
 
     <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/enter_details"
-        android:visibility="gone"
-        >
-    <LinearLayout
-        android:paddingLeft="10dp"
+        android:id="@+id/enter_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="15dp">
-        <TextView
+        android:visibility="gone">
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="Patient Particulars"
-            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
-            <EditText
-                android:id="@+id/name_et"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:hint="First Name"
-                />
-            <EditText
-                android:id="@+id/last_name_et"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:hint="Family Name"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <EditText
-                android:id="@+id/nric_et"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:hint="NRIC/Passport no."
-                />
-            <EditText
-                android:id="@+id/contact_et"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:hint="Contact no."
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <EditText
-            android:id="@+id/email_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:gravity="center"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
             <TextView
-                android:layout_width="0dp"
-                android:layout_weight="6"
-                android:textSize="20sp"
-                android:layout_height="wrap_content"
-                android:text="Date of birth"/>
-            <EditText
-                android:id="@+id/dob_day_et"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="DD"
-                android:layout_weight="1"
-                android:inputType="number"
-                />
-            <EditText
-                android:id="@+id/dob_month_et"
-                android:layout_width="wrap_content"
-                android:hint="MM"
-                android:layout_weight="1"
-                android:inputType="number"
-                android:layout_height="wrap_content" />
-            <EditText
-                android:id="@+id/dob_year_et"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:hint="YYYY"
-                android:inputType="number"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
 
-        <EditText
-            android:id="@+id/extra_et_enter"
-            android:paddingLeft="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:hint="Write Down anything we need to know about your condition"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <Button
-                android:id="@+id/submit_button_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Submit"
-                android:layout_gravity="bottom"
-                android:background="@color/colorPrimary"
-                android:textColor="#FFF"
+                android:text="Patient Particulars"
+                android:textSize="20sp" />
 
-                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="First Name" />
+
+                <EditText
+                    android:id="@+id/last_name_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Family Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/nric_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="NRIC/Passport no." />
+
+                <EditText
+                    android:id="@+id/contact_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Contact no." />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/email_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="Date of birth"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/dob_day_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="DD"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/dob_month_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="MM"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/dob_year_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="YYYY"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/extra_et_enter"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="Write Down anything we need to know about your condition"
+                android:paddingLeft="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/submit_button_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/colorPrimary"
+                    android:text="Submit"
+                    android:textColor="#FFF"
+
+                    />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
-</FrameLayout>
+    </FrameLayout>
 
 
 </LinearLayout>
