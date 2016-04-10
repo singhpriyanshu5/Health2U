@@ -36,14 +36,18 @@
             android:id="@+id/clinic_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username" />
+            android:hint="Username"
+            android:singleLine="true"/>
 
 
         <EditText
             android:id="@+id/clinic_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password" />
+            android:hint="Password"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            />
 
         <Button
             android:layout_marginTop="10dp"

@@ -6,6 +6,10 @@ android {
 
     defaultConfig {
         applicationId "com.example.priyanshu.health2u"
+        manifestPlaceholders = [manifestApplicationId: "${applicationId}",
+                                onesignal_app_id: "e3555c08-68d1-4e34-a342-12de8bad0185",
+                                onesignal_google_project_number: "143412396440"]
+
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -27,7 +31,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     compile 'com.parse.bolts:bolts-android:1.+'
-    compile 'com.parse:parse-android:1.+'
+    compile 'com.parse:parse-android:1.10.3'
     compile 'com.parse:parseui-login-android:0.0.1'
     compile 'com.facebook.android:facebook-android-sdk:4.6.0'
     compile 'com.parse:parsefacebookutils-v4-android:1.10.3@aar'
@@ -36,4 +40,8 @@ dependencies {
     compile 'com.google.android.gms:play-services-location:8.4.0'
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
     compile 'com.wdullaer:materialdatetimepicker:2.3.0'
+    compile 'com.onesignal:OneSignal:2.+@aar'
+    compile 'com.google.android.gms:play-services-gcm:+'
+    compile 'com.google.android.gms:play-services-analytics:+'
+    compile "com.google.android.gms:play-services-location:+"
 }

@@ -11,9 +11,9 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Booking History" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_manage_queue"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Manage Queue" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"

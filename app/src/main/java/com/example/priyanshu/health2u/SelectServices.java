@@ -24,6 +24,8 @@ public class SelectServices extends AppCompatActivity {
     private String dateText;
     private String timeText;
 
+    String user_name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class SelectServices extends AppCompatActivity {
         title = intent.getStringExtra("clinic_name");
         dateText = intent.getStringExtra("date");
         timeText = intent.getStringExtra("time");
+        user_name = intent.getStringExtra("user_name");
         setContentView(R.layout.activity_select_services);
         linearList = (LinearLayout) findViewById(R.id.linear_list);
         ArrayList<String> arr = new ArrayList<>();
@@ -89,6 +92,7 @@ public class SelectServices extends AppCompatActivity {
         intent.putExtra("date",dateText);
         intent.putExtra("time",timeText);
         intent.putExtra("services",finalArray);
+        intent.putExtra("user_name", user_name);
         startActivity(intent);
     }
 

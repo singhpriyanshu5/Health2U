@@ -54,17 +54,36 @@ public class QueueDetails extends AppCompatActivity {
             public void done(List<ParseObject> objects, ParseException e) {
                 if(e==null){
                     if(objects.size()>0){
-                        String clinic_name = objects.get(0).getString("clinic_name");
-                        clinic_name_tv.setText(clinic_name);
-                        int your_queue = objects.get(0).getInt("queue_number");
-                        your_queue_tv.setText(String.valueOf(your_queue));
-                        int current_queue = your_queue-30;
-                        current_queue_tv.setText(String.valueOf(current_queue));
-                        int estimated_wait = random_estimated_time[randomNum];
-                        estimated_time_tv.setText(String.valueOf(estimated_wait) + "mins");
-                        String patient_name = objects.get(0).getString("patient_name");
-                        patient_name_tv.setText(patient_name);
-                        frame_main.setVisibility(View.VISIBLE);
+                        final String clinic_name = objects.get(0).getString("clinic_name");
+                        final int your_queue = objects.get(0).getInt("queue_number");
+                        final String patient_name = objects.get(0).getString("patient_name");
+
+                        ParseQuery<ParseObject> query = ParseQuery.getQuery("usernameToClinic");
+                        query.whereEqualTo("clinic_name", clinic_name);
+                        query.findInBackground(new FindCallback<ParseObject>() {
+                            @Override
+                            public void done(List<ParseObject> objects, ParseException e) {
+                                if (e == null) {
+                                    if (objects.size() > 0) {
+                                        int current_queue = objects.get(0).getInt("current_queue");
+                                        int estimated_wait = (your_queue-current_queue)*15;
+                                        clinic_name_tv.setText(clinic_name);
+                                        your_queue_tv.setText(String.valueOf(your_queue));
+                                        current_queue_tv.setText(String.valueOf(current_queue));
+                                        estimated_time_tv.setText(String.valueOf(estimated_wait) + "mins");
+                                        patient_name_tv.setText(patient_name);
+                                        frame_main.setVisibility(View.VISIBLE);
+
+                                    } else {
+                                        Log.d("QueueDetails", "no such clinic");
+                                    }
+
+                                }
+                            }
+                        });
+
+
+
                     }else{
                         Log.d("QueueDetails", "no queue data found for this objectId");
                     }

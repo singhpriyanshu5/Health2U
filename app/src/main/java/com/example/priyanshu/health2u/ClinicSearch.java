@@ -25,6 +25,7 @@ public class ClinicSearch extends AppCompatActivity {
 
     AutoCompleteTextView auto_textView = null;
     ListView clinic_list;
+    String user_name = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,8 @@ public class ClinicSearch extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        user_name = getIntent().getStringExtra("user_name");
 
         clinic_list = (ListView)findViewById(R.id.clinic_list);
 //        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,)
@@ -59,6 +62,7 @@ public class ClinicSearch extends AppCompatActivity {
         clinic_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 auto_textView.setText(clinic_names.get((int) position));
             }
         });
@@ -103,6 +107,8 @@ public class ClinicSearch extends AppCompatActivity {
         if (id == R.id.done) {
             Intent i = new Intent(this, ClinicDetail.class);
             i.putExtra("title", auto_textView.getText().toString());
+            i.putExtra("address", "962 Jurong West Street 91, Singapore 640962");
+            i.putExtra("user_name",user_name);
             Log.d("ClinicSearch", auto_textView.getText().toString());
             startActivity(i);
             return true;

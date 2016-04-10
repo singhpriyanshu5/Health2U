@@ -60,6 +60,8 @@ public class AdminNavigation extends AppCompatActivity
                 .commit();
 
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
@@ -106,18 +108,23 @@ public class AdminNavigation extends AppCompatActivity
         if (id == R.id.nav_bookings) {
             fragment = new AdminBookingFragment();
             Bundle bundle = new Bundle();
-            Log.d("AdminNavigation", "user: " + clinic_name);
+            Log.d("AdminNavigation", "clinic: " + clinic_name);
             bundle.putString("clinic_name", clinic_name);
             fragment.setArguments(bundle);
         } else if (id == R.id.nav_booking_history) {
             fragment = new AdminBookingFragment();
             Bundle bundle = new Bundle();
-            Log.d("AdminNavigation", "user: " + clinic_name);
+            Log.d("AdminNavigation", "clinic: " + clinic_name);
             bundle.putString("clinic_name", clinic_name);
             bundle.putString("isHistory","true");
             fragment.setArguments(bundle);
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_manage_queue) {
+            fragment = new ManageQueueFragment();
+            Bundle bundle = new Bundle();
+            Log.d("AdminNavigation", "clinic: " + clinic_name);
+            bundle.putString("clinic_name", clinic_name);
+            fragment.setArguments(bundle);
 
         } else if (id == R.id.nav_manage) {
 

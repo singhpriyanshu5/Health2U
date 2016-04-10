@@ -35,7 +35,15 @@
         android:hint="Enter your full name"
         android:id="@+id/name_et"
         />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your NRIC/Passport"
+            android:id="@+id/nric_et"
+            />
     <Button
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

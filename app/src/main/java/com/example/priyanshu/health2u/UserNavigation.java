@@ -1,15 +1,16 @@
 package com.example.priyanshu.health2u;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Address;
-import android.location.Geocoder;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.ResultReceiver;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -50,8 +51,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-import java.util.Locale;
 
 
 public class UserNavigation extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnMapReadyCallback,
@@ -82,6 +81,56 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
 
     private FloatingActionButton fab =null;
 
+    private AddressResultReceiver mResultReceiver = new AddressResultReceiver(null);
+
+    String selected_clinic = "Raffles Clinic";
+
+    @SuppressLint("ParcelCreator")
+    class AddressResultReceiver extends ResultReceiver {
+        public AddressResultReceiver(Handler handler) {
+            super(handler);
+        }
+
+        @Override
+        protected void onReceiveResult(int resultCode, Bundle resultData) {
+
+            // Display the address string
+            // or an error message sent from the intent service.
+            final String AddressOutput = resultData.getString("message");
+            final String est_time = resultData.getString("est_time");
+            Log.d("asssss",AddressOutput);
+
+            Log.d("GeoCoder", "address is : " + AddressOutput);
+
+//            UpdateUI ui = new UpdateUI(AddressOutput);
+//            ui.run();
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+
+                    displayTextFragment(est_time,AddressOutput);
+//stuff that updates ui
+
+                }
+            });
+
+
+        }
+    }
+
+
+
+
+
+
+    private void displayTextFragment(String est_time,String AddressOutput){
+        tf.setTextTv(est_time,selected_clinic,AddressOutput," ",isPharmacies,current_user_name);
+        if(text_part.getVisibility()== View.GONE) {
+            text_part.setVisibility(View.VISIBLE);
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +150,7 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(UserNavigation.this, ClinicSearch.class);
+                i.putExtra("user_name",current_user_name);
                 startActivity(i);
             }
         });
@@ -152,6 +202,12 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+//        ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+//        installation.put("missed_queue",true);
+//        installation.saveInBackground();
+
+//        OneSignal.sendTag("user_name", current_user_name);
 
 
     }
@@ -374,38 +430,31 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
         }
     }
 
+    protected void startIntentService(Location loc_data, String clinic_name) {
+        Intent intent = new Intent(this, FetchAddressIntentService.class);
+        intent.putExtra("RECEIVER", mResultReceiver);
+        intent.putExtra("loc_data", loc_data);
+        intent.putExtra("clinic_name",clinic_name);
+        startService(intent);
+    }
+
     @Override
     public boolean onMarkerClick(Marker marker) {
         String title=marker.getTitle();
         LatLng position = marker.getPosition();
         double latitude = position.latitude;
         double longitude = position.longitude;
-        Geocoder geocoder;
-        List<Address> yourAddresses=null;
-        geocoder = new Geocoder(this, Locale.getDefault());
-        try {
-            yourAddresses= geocoder.getFromLocation(latitude, longitude, 1);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        String yourAddress="address";
-        String yourCity="city";
-        String yourCountry="country";
+        Log.d("latitude", String.valueOf(latitude));
+        Log.d("longitude", String.valueOf(longitude));
+        Location loc_data = new Location("");
+        loc_data.setLatitude(latitude);
+        loc_data.setLongitude(longitude);
+        selected_clinic = title;
 
-        if (yourAddresses.size() > 0)
-        {
-            yourAddress = yourAddresses.get(0).getAddressLine(0);
-            yourCity = yourAddresses.get(0).getAddressLine(1);
-            yourCountry = yourAddresses.get(0).getAddressLine(2);
-        }
+        startIntentService(loc_data,title);
 
-        Log.d("GeoCoder", "address is : " + yourAddress + yourCity + yourCountry);
 
-        tf.setTextTv(title,yourAddress,yourCity,isPharmacies,current_user_name);
-        if(text_part.getVisibility()== View.GONE) {
-            text_part.setVisibility(View.VISIBLE);
-        }
         return false;
     }
 
@@ -487,6 +536,7 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
             android.app.FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, fragment)
+                    .addToBackStack(null)
                     .commit();
             LinearLayout linearLayout = (LinearLayout)findViewById(R.id.linear);
             linearLayout.setVisibility(View.GONE);

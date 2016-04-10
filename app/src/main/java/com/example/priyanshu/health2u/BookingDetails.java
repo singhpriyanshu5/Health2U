@@ -21,9 +21,9 @@ import java.util.List;
 
 public class BookingDetails extends AppCompatActivity {
 
-    private TextView clinic_name_tv, time_text_tv, date_text_tv, name_tv, nric_tv, contact_tv, email_tv, dob_tv, extra_tv;
+    private TextView clinic_name_tv, time_text_tv, date_text_tv, name_tv, nric_tv, contact_tv, email_tv, dob_tv, extra_tv, doctor_tv;
     private Button attended_btn;
-    private  String objectId,clinic_name, time_text, date_text, name, nric, contact, email, dob, extra;
+    private  String objectId,clinic_name, time_text, date_text, name, nric, contact, email, dob, extra, doctor;
     private boolean isAdmin=false;
     private FrameLayout frame_booking;
     @Override
@@ -42,6 +42,7 @@ public class BookingDetails extends AppCompatActivity {
         email_tv = (TextView)findViewById(R.id.email_tv);
         dob_tv = (TextView)findViewById(R.id.dob_tv);
         extra_tv = (TextView)findViewById(R.id.extra_tv);
+        doctor_tv = (TextView)findViewById(R.id.doctor_tv);
         attended_btn = (Button)findViewById(R.id.attended_btn);
 
         Intent i = getIntent();
@@ -63,11 +64,13 @@ public class BookingDetails extends AppCompatActivity {
                         date_text = objects.get(0).getString("dateText");
                         name = objects.get(0).getString("patient_name");
                         extra = objects.get(0).getString("extra_comments");
+                        doctor = objects.get(0).getString("selected_doctor");
                         clinic_name_tv.setText(clinic_name);
                         time_text_tv.setText(time_text);
                         date_text_tv.setText(date_text);
                         name_tv.setText(name);
                         extra_tv.setText(extra);
+                        doctor_tv.setText(doctor);
                         ParseQuery<ParseObject> query = ParseQuery.getQuery("patient");
                         query.whereEqualTo("name", name);
                         query.findInBackground(new FindCallback<ParseObject>() {

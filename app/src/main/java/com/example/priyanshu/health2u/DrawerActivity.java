@@ -438,7 +438,7 @@ public class DrawerActivity extends AppCompatActivity implements OnMapReadyCallb
 
         Log.d("GeoCoder", "address is : " + yourAddress + yourCity + yourCountry);
 
-        tf.setTextTv(title,yourAddress,yourCity,isPharmacies,current_user_name);
+        //tf.setTextTv(title,yourAddress,yourCity,isPharmacies,current_user_name);
         if(text_part.getVisibility()== View.GONE) {
             text_part.setVisibility(View.VISIBLE);
         }

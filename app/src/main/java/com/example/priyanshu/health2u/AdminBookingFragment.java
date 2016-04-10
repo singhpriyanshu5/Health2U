@@ -36,7 +36,7 @@ public class AdminBookingFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_admin_booking, container, false);
         clinic_name = getArguments().getString("clinic_name");
-
+        isHistory = getArguments().getString("isHistory");
         res =getResources();
         list= ( ListView )rootView.findViewById( R.id.lv_admin);
 
@@ -44,6 +44,7 @@ public class AdminBookingFragment extends Fragment {
             ParseQuery<ParseObject> query = ParseQuery.getQuery("booking");
             query.whereEqualTo("clinic_name", clinic_name);
             query.whereEqualTo("attended", true);
+            query.orderByDescending("updatedAt");
             query.findInBackground(new FindCallback<ParseObject>()
 
                                    {
@@ -82,6 +83,7 @@ public class AdminBookingFragment extends Fragment {
             ParseQuery<ParseObject> query = ParseQuery.getQuery("booking");
             query.whereEqualTo("clinic_name", clinic_name);
             query.whereEqualTo("attended", false);
+            query.orderByDescending("updatedAt");
             query.findInBackground(new FindCallback<ParseObject>()
 
                                    {
@@ -142,6 +144,7 @@ public class AdminBookingFragment extends Fragment {
         i.putExtra("time_text", tempValues.getTime_text());
         i.putExtra("date_text", tempValues.getDate_text());
         i.putExtra("isAdmin", true);
+        i.putExtra("objectId", tempValues.getObjectId());
         startActivity(i);
 
     }

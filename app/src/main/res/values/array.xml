@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="dates_array">
+    <item>3:30 pm</item>
+    <item>4:00 pm</item>
+        <item>4:30 pm</item>
+    </array>
+</resources>

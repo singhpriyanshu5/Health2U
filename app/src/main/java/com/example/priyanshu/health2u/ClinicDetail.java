@@ -22,15 +22,16 @@ public class ClinicDetail extends AppCompatActivity {
         Intent intent = getIntent();
         title = intent.getStringExtra("title");
         m_address = intent.getStringExtra("address");
-        m_city = intent.getStringExtra("city");
+        //m_city = intent.getStringExtra("city");
         user_name = intent.getStringExtra("user_name");
-        tv_address.setText(m_address + " " + m_city);
+        tv_address.setText(m_address);
         actionBar.setTitle(title);
     }
 
     public void openDateSelect(View view) {
         Intent intent = new Intent(this, DateSelect.class);
         intent.putExtra("clinic_name",title);
+        intent.putExtra("user_name", user_name);
         startActivity(intent);
     }
 

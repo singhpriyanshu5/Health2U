@@ -29,6 +29,7 @@ public class DateSelect extends AppCompatActivity implements com.wdullaer.materi
     private SimpleDateFormat sdfTime;
     private DatePickerDialog dpd=null;
     TimePickerDialog tpd =null;
+    String user_name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,7 @@ public class DateSelect extends AppCompatActivity implements com.wdullaer.materi
         actionBar.setDisplayHomeAsUpEnabled(true);
         Intent intent = getIntent();
         title = intent.getStringExtra("clinic_name");
+        user_name = intent.getStringExtra("user_name");
         Calendar now = Calendar.getInstance();
         dpd = DatePickerDialog.newInstance(
                 this,
@@ -124,6 +126,7 @@ public class DateSelect extends AppCompatActivity implements com.wdullaer.materi
         intent.putExtra("clinic_name",title);
         intent.putExtra("date",sdfDate.format(myCalendar.getTime()));
         intent.putExtra("time",sdfTime.format(myCalendar.getTime()));
+        intent.putExtra("user_name", user_name);
         startActivity(intent);
     }
 

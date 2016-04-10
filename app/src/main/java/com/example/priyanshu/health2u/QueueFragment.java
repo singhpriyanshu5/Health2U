@@ -45,22 +45,42 @@ public class QueueFragment extends Fragment {
         res = getResources();
         list = (ListView)rootView.findViewById(R.id.list_queue);
         ParseQuery<ParseObject> q = ParseQuery.getQuery("queue");
-        q.whereEqualTo("user_name",user_name);
+        q.whereEqualTo("user_name", user_name);
         q.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null) {
                     if (objects.size() > 0) {
-                        for(int i=0;i<objects.size();i++) {
-                            String patient_name = objects.get(i).getString("patient_name");
-                            String clinic_name = objects.get(i).getString("clinic_name");
-                            int your_queue = objects.get(i).getInt("queue_number");
-                            String objectId = objects.get(i).getObjectId();
-                            Log.d("QueueFragment", "xxxxxxyyyyyy" + objectId);
-                            CustomArr.add(setListData(patient_name, clinic_name, your_queue, objectId));
+                        for (int i = 0; i < objects.size(); i++) {
+                            final String patient_name = objects.get(i).getString("patient_name");
+                            final String clinic_name = objects.get(i).getString("clinic_name");
+                            final int your_queue = objects.get(i).getInt("queue_number");
+                            final String objectId = objects.get(i).getObjectId();
+
+                            ParseQuery<ParseObject> query = ParseQuery.getQuery("usernameToClinic");
+                            query.whereEqualTo("clinic_name", clinic_name);
+                            query.findInBackground(new FindCallback<ParseObject>() {
+                                @Override
+                                public void done(List<ParseObject> objects, ParseException e) {
+                                    if (e == null) {
+                                        if (objects.size() > 0) {
+                                            int current_queue = objects.get(0).getInt("current_queue");
+                                            Log.d("QueueFragment", "xxxxxxyyyyyy" + objectId);
+                                            CustomArr.add(setListData(patient_name, clinic_name, your_queue, objectId, current_queue));
+
+                                            adapter = new CustomQueueAdapter(QueueFragment.this, CustomArr, res);
+                                            list.setAdapter(adapter);
+                                        } else {
+                                            Log.d("QueueFragment", "no such clinic");
+                                        }
+
+                                    }
+                                }
+                            });
+
+
                         }
-                        adapter = new CustomQueueAdapter(QueueFragment.this,CustomArr,res);
-                        list.setAdapter(adapter);
+
                     } else {
                         Log.d("QueueFragment", "no queue data found");
                     }
@@ -73,17 +93,19 @@ public class QueueFragment extends Fragment {
         return rootView;
     }
 
-    public ListModelQueue setListData(String patient_name, String clinic_name, int your_queue, String objectId)
+    public ListModelQueue setListData(final String patient_name, final String clinic_name, final int your_queue, final String objectId, final int current_queue)
     {
         final ListModelQueue sched = new ListModelQueue();
 
-        /******* Firstly take data in model object ******/
         sched.setPatient_name(patient_name);
         sched.setClinic_name(clinic_name);
         sched.setYour_queue(your_queue);
-        sched.setCurrent_queue(your_queue - 30);
+        sched.setCurrent_queue(current_queue);
         sched.setObjectId(objectId);
+
+
         return sched;
+
     }
 
     public void onItemClick(int mPosition)

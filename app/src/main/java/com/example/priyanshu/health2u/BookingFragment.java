@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +35,7 @@ public class BookingFragment extends Fragment {
     CustomAdapter adapter,adapter2;
     public ArrayList<ListModel> CustomArr = new ArrayList<ListModel>();
     public ArrayList<ListModel> CustomArr2 = new ArrayList<ListModel>();
-
+    RelativeLayout loadingPanel;
 
     public BookingFragment() {
         // Required empty public constructor
@@ -46,6 +47,9 @@ public class BookingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_booking, container, false);
+        loadingPanel = (RelativeLayout) rootView.findViewById(R.id.loadingPanel);
+        loadingPanel.setVisibility(View.VISIBLE);
+
         tv_current = (TextView) rootView.findViewById(R.id.current_nodata);
         tv_past = (TextView)rootView.findViewById(R.id.past_nodata);
         user_name = getArguments().getString("user_name");
@@ -56,6 +60,7 @@ public class BookingFragment extends Fragment {
         ParseQuery<ParseObject> query = ParseQuery.getQuery("booking");
         query.whereEqualTo("user_name", user_name);
         query.whereEqualTo("attended", false);
+        query.orderByDescending("updatedAt");
             query.findInBackground(new FindCallback<ParseObject>()
 
             {
@@ -93,11 +98,13 @@ public class BookingFragment extends Fragment {
         ParseQuery<ParseObject> query2 = ParseQuery.getQuery("booking");
         query2.whereEqualTo("user_name", user_name);
         query2.whereEqualTo("attended", true);
+        query2.orderByDescending("updatedAt");
         query2.findInBackground(new FindCallback<ParseObject>()
 
                                {
                                    public void done (List < ParseObject > bookingList, ParseException e){
                                        if (e == null) {
+                                           loadingPanel.setVisibility(View.GONE);
                                            if (bookingList != null) {
                                                if(bookingList.size()>0) {
                                                    for (int i = 0; i < bookingList.size(); i++) {

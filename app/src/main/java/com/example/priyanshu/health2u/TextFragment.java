@@ -36,7 +36,7 @@ public class TextFragment extends Fragment {
         return view;
     }
 
-    public void setTextTv(String text, String address, String city, boolean isPharmacies,String user_name){
+    public void setTextTv(String est_time, String text, String address, String city, boolean isPharmacies,String user_name){
         tv.setText(text);
         //m_isPharmacies=isPharmacies;
         if(!isPharmacies) {
@@ -44,7 +44,7 @@ public class TextFragment extends Fragment {
         }else {
             tv2.setText("Pharmacy: " + address + " " + city);
         }
-        tv3.setText("Waiting Time : 5 mins ");
+        tv3.setText("Waiting Time : " + est_time);
         tv4.setText("Consultation fee : 50SGD ");
         ll.setOnTouchListener(new LinearLayoutTouchListener(this,isPharmacies,address,city,user_name));
 
