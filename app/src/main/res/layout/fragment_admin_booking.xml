@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:background="#003A94"
             android:paddingLeft="10dp"
-            android:text="Bookings for this week"
+            android:text="Bookings for today "
             android:textColor="#FFF"
             android:textSize="26sp" />
 

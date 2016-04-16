@@ -70,7 +70,7 @@ public class QueueDetails extends AppCompatActivity {
                                         clinic_name_tv.setText(clinic_name);
                                         your_queue_tv.setText(String.valueOf(your_queue));
                                         current_queue_tv.setText(String.valueOf(current_queue));
-                                        estimated_time_tv.setText(String.valueOf(estimated_wait) + "mins");
+                                        estimated_time_tv.setText(String.valueOf(estimated_wait) + " mins");
                                         patient_name_tv.setText(patient_name);
                                         frame_main.setVisibility(View.VISIBLE);
 

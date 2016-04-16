@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.onesignal.OneSignal;
@@ -39,7 +40,7 @@ public class ManageQueueFragment extends Fragment {
     String patient_name_deleted="";
     String clinic_name_deleted ="";
     String nric="";
-
+    RelativeLayout loadingPanel;
 
     public ManageQueueFragment() {
         // Required empty public constructor
@@ -60,6 +61,8 @@ public class ManageQueueFragment extends Fragment {
         next_number_btn = (Button) rootView.findViewById(R.id.next_number_btn);
         skip_btn = (Button) rootView.findViewById(R.id.skip_btn);
         nric_tv = (TextView) rootView.findViewById(R.id.nric_tv);
+        loadingPanel = (RelativeLayout)rootView.findViewById(R.id.loadingPanel);
+        loadingPanel.setVisibility(View.VISIBLE);
         ParseQuery<ParseObject> q = ParseQuery.getQuery("usernameToClinic");
         q.whereEqualTo("clinic_name", clinic_name);
         q.findInBackground(new FindCallback<ParseObject>() {
@@ -78,6 +81,7 @@ public class ManageQueueFragment extends Fragment {
                             public void done(List<ParseObject> objects, ParseException e) {
                                 if (e == null) {
                                     if (objects.size() > 0) {
+                                        loadingPanel.setVisibility(View.GONE);
                                         user_name = objects.get(0).getString("user_name");
                                         queueObjectId = objects.get(0).getObjectId();
                                         patient_name = objects.get(0).getString("patient_name");
@@ -123,7 +127,7 @@ public class ManageQueueFragment extends Fragment {
 //                push.setMessage("Willie Hayes injured by own pop fly.");
 //                push.sendInBackground();
 
-                String userId = "02214c7b-d7f8-423c-85d8-6d3364688eb2";
+                String userId = "37af541b-7f0c-495b-a3f0-a42257ec1999";
                 //String userId2 = "a8d72100-ac0c-4648-a429-3067b97934e6";
 
                 try {
@@ -208,6 +212,9 @@ public class ManageQueueFragment extends Fragment {
                                         queueObjectId = objects.get(0).getObjectId();
                                         patient_name = objects.get(0).getString("patient_name");
                                         patient_name_tv.setText(patient_name);
+                                        nric = objects.get(0).getString("nric");
+                                        Log.d("ManageQueue","vvvv"+nric);
+                                        nric_tv.setText(nric);
                                         current_queue_tv.setText(String.valueOf(current_queue_no));
                                     } else {
                                         Log.d("ManageQueue", "No queue data");

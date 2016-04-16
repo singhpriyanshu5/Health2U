@@ -81,7 +81,18 @@ public class FetchAddressIntentService extends IntentService {
     }
 
     private void deliverResult(int resultCode, String message) {
-        est_time = "20";
+        if(clinic_name.equals("Healthmark Pioneer Mall Clinic")) {
+            est_time = "40";
+        }else if(clinic_name.equals("Prohealth Medical Group @ Jurong West Pte Ltd")) {
+            est_time = "35";
+        }
+        else if(clinic_name.equals("FOO CLINIC")){
+            est_time = "30";
+        }else{
+            est_time = "50";
+        }
+
+
         Bundle bundle = new Bundle();
         bundle.putString("message", message);
         bundle.putString("est_time",est_time);

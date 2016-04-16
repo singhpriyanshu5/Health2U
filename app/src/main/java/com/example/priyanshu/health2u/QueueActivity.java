@@ -95,7 +95,7 @@ public class QueueActivity extends AppCompatActivity {
                                 your_queue_tv.setText(String.valueOf(your_queue));
                                 //current_queue = latest_queue + 20;
                                 current_queue_tv.setText(String.valueOf(current_queue));
-                                estimated_time_tv.setText(String.valueOf(est_time));
+                                estimated_time_tv.setText(String.valueOf(est_time) + " mins");
                                 clinic_name_tv = (TextView) findViewById(R.id.clinic_name_tv);
                                 clinic_name_tv.setText(clinic_name);
                                 frame_initial.setVisibility(View.GONE);

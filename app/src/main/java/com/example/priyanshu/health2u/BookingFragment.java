@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -164,12 +163,12 @@ public class BookingFragment extends Fragment {
 
         // SHOW ALERT
 
-        Toast.makeText(getActivity(),
-                " " + tempValues.getClinic_name()
-                        + " " + tempValues.getTime_text() +
-                        " " + tempValues.getDate_text(),
-                Toast.LENGTH_SHORT)
-                .show();
+//        Toast.makeText(getActivity(),
+//                " " + tempValues.getClinic_name()
+//                        + " " + tempValues.getTime_text() +
+//                        " " + tempValues.getDate_text(),
+//                Toast.LENGTH_SHORT)
+//                .show();
     }
 
 }

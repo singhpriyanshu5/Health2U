@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -30,6 +31,7 @@ public class QueueFragment extends Fragment {
     ArrayList<ListModelQueue> CustomArr = new ArrayList<>();
     private String user_name;
     ListView list;
+    RelativeLayout loadingPanel;
 
     public QueueFragment() {
         // Required empty public constructor
@@ -41,6 +43,8 @@ public class QueueFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_queue, container, false);
+        loadingPanel = (RelativeLayout)rootView.findViewById(R.id.loadingPanel);
+        loadingPanel.setVisibility(View.VISIBLE);
         user_name = getArguments().getString("user_name");
         res = getResources();
         list = (ListView)rootView.findViewById(R.id.list_queue);
@@ -64,6 +68,7 @@ public class QueueFragment extends Fragment {
                                 public void done(List<ParseObject> objects, ParseException e) {
                                     if (e == null) {
                                         if (objects.size() > 0) {
+                                            loadingPanel.setVisibility(View.GONE);
                                             int current_queue = objects.get(0).getInt("current_queue");
                                             Log.d("QueueFragment", "xxxxxxyyyyyy" + objectId);
                                             CustomArr.add(setListData(patient_name, clinic_name, your_queue, objectId, current_queue));

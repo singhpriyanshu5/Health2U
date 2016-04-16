@@ -22,11 +22,12 @@ public class AdminNavigation extends AppCompatActivity
     private String clinic_name="";
     private String clinic_address="";
 
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_navigation);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //frame = (FrameLayout) findViewById(R.id.fragment);
         Intent i = getIntent();
@@ -108,12 +109,14 @@ public class AdminNavigation extends AppCompatActivity
         Fragment fragment = null;
 
         if (id == R.id.nav_bookings) {
+            toolbar.setTitle("Today's Bookings");
             fragment = new AdminBookingFragment();
             Bundle bundle = new Bundle();
             Log.d("AdminNavigation", "clinic: " + clinic_name);
             bundle.putString("clinic_name", clinic_name);
             fragment.setArguments(bundle);
         } else if (id == R.id.nav_booking_history) {
+            toolbar.setTitle("Booking History");
             fragment = new AdminBookingFragment();
             Bundle bundle = new Bundle();
             Log.d("AdminNavigation", "clinic: " + clinic_name);
@@ -122,6 +125,7 @@ public class AdminNavigation extends AppCompatActivity
             fragment.setArguments(bundle);
 
         } else if (id == R.id.nav_manage_queue) {
+            toolbar.setTitle("Manage Queue");
             fragment = new ManageQueueFragment();
             Bundle bundle = new Bundle();
             Log.d("AdminNavigation", "clinic: " + clinic_name);
@@ -129,10 +133,6 @@ public class AdminNavigation extends AppCompatActivity
             fragment.setArguments(bundle);
 
         } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
 

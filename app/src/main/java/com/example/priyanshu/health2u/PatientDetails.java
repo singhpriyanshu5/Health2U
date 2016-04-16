@@ -50,7 +50,7 @@ public class PatientDetails extends AppCompatActivity {
     private EditText load_nric_et;
     String selected_doctor;
     Spinner spinner;
-    Button submit_button;
+    Button submit_button,submit_button_2;
     boolean is_clash=false;
     RelativeLayout loadingPanel;
 
@@ -92,8 +92,15 @@ public class PatientDetails extends AppCompatActivity {
         tv1.setText(title);
 
         submit_button = (Button)findViewById(R.id.submit_button);
+        submit_button_2 = (Button)findViewById(R.id.submit_button_2);
 
 
+        submit_button_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SubmitDetails();
+            }
+        });
 
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -187,8 +194,8 @@ public class PatientDetails extends AppCompatActivity {
            }
        });
 
-
-       pushBooking();
+//        if(!is_clash)
+//       pushBooking();
 
     }
 
@@ -231,13 +238,13 @@ public class PatientDetails extends AppCompatActivity {
                         }
                     });
 
-                    if(!is_clash) {
+//                    if(!is_clash) {
                         Intent intent = new Intent(PatientDetails.this, UserNavigation.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         intent.putExtra("origin", true);
                         startActivity(intent);
                         finish();
-                    }
+//                    }
 
                 } else {
                     Log.d("PatientDetails", "some error in booking savecallback");
@@ -274,7 +281,7 @@ public class PatientDetails extends AppCompatActivity {
         // Do stuff here.
         Log.d("FragmentAlertDialog", "Positive click!");
         timeText = time_string;
-        is_clash = false;
+        //is_clash = false;
         pushBooking();
 //        Intent intent = new Intent(PatientDetails.this, DrawerActivity.class);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -284,6 +291,7 @@ public class PatientDetails extends AppCompatActivity {
     }
 
     public void doNegativeClick() {
+       // is_clash=true;
         // Do stuff here.
         Log.d("FragmentAlertDialog", "Negative click!");
         Intent i = new Intent(this, DateSelect.class);
@@ -314,7 +322,7 @@ public class PatientDetails extends AppCompatActivity {
     }
 
     public void enterDetails(View view) {
-        submit_button = (Button)findViewById(R.id.submit_button_2);
+        //submit_button = (Button)findViewById(R.id.submit_button_2);
         extra_et = (EditText) findViewById(R.id.extra_et_enter);
         initial_frame.setVisibility(View.GONE);
         enter_details.setVisibility(View.VISIBLE);
@@ -332,7 +340,7 @@ public class PatientDetails extends AppCompatActivity {
     public void loadDetails(View view) {
         hideKeyboard();
         loadingPanel.setVisibility(View.VISIBLE);
-        submit_button = (Button)findViewById(R.id.submit_button);
+        //submit_button = (Button)findViewById(R.id.submit_button);
         extra_et = (EditText) findViewById(R.id.extra_et_load);
 
         nric= load_nric_et.getText().toString();

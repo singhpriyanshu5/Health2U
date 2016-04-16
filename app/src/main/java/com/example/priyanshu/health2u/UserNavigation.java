@@ -175,6 +175,7 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
         if (isOrigiin == true) {
             //selectItem(1);
             toolbar.setTitle("Bookings list");
+            Log.d("UserNavigation", toolbar.getTitle().toString());
             Fragment fragment = new BookingFragment();
             Bundle bundle = new Bundle();
             bundle.putString("user_name", current_user_name);
@@ -339,7 +340,7 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
                 newLocation.setLongitude(arr[1]);
 
                 float dist = newLocation.distanceTo(mLastLocation)/1000;
-                if(dist<3) {
+                if(dist<5) {
 
                     map.setOnMarkerClickListener(this);
 
@@ -534,8 +535,6 @@ public class UserNavigation extends AppCompatActivity implements NavigationView.
         } else if (id == R.id.nav_settings) {
             fragment = new SettingsFragment();
             toolbar.setTitle("Settings");
-
-        }  else if (id == R.id.nav_send) {
 
         }
 

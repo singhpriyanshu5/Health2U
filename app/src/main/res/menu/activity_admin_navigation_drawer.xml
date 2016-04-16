@@ -5,7 +5,7 @@
         <item
             android:id="@+id/nav_bookings"
             android:icon="@drawable/booking"
-            android:title="This week's Bookings" />
+            android:title="Today's Bookings" />
         <item
             android:id="@+id/nav_booking_history"
             android:icon="@drawable/ic_menu_gallery"
@@ -17,20 +17,9 @@
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Settings" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+
 
 </menu>
