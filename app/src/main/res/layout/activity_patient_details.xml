@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#FFF"
     android:orientation="vertical"
-    tools:context="com.example.priyanshu.health2u.PatientDetails">
+    tools:context=".controller.PatientDetails">
 
     <RelativeLayout
         android:id="@+id/loadingPanel"
@@ -280,7 +280,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Preffered Doctor: "
+                    android:text="Preferred Doctor: "
                     android:textSize="18sp" />
 
                 <Spinner

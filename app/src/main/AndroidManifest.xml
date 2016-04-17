@@ -23,7 +23,7 @@
     <uses-permission android:name="com.example.priyanshu.health2u.permission.C2D_MESSAGE" />
 
     <application
-        android:name=".App"
+        android:name=".controller.App"
         android:allowBackup="true"
         android:icon="@drawable/health_logo_new"
         android:label="@string/app_name"
@@ -31,7 +31,7 @@
         android:theme="@style/AppTheme">
 
         <service
-            android:name=".FetchAddressIntentService"
+            android:name=".controller.FetchAddressIntentService"
             android:exported="false"/>
 
         <activity
@@ -40,7 +40,7 @@
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".controller.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -69,7 +69,7 @@
             android:value="@string/facebook_app_id" />
 
         <activity
-            android:name=".DrawerActivity"
+            android:name=".controller.DrawerActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -84,35 +84,35 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".ClinicDetail" />
-        <activity android:name=".DateSelect" />
-        <activity android:name=".PatientDetails" />
-        <activity android:name=".SelectServices" />
-        <activity android:name=".ViewBooking" />
-        <activity android:name=".ViewBooking2" />
-        <activity android:name=".ClinicSearch" />
-        <activity android:name=".AdminActivity" />
-        <activity android:name=".AdminLogin" />
-        <activity android:name=".MyDispatchActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".controller.ClinicDetail" />
+        <activity android:name=".controller.DateSelect" />
+        <activity android:name=".controller.PatientDetails" />
+        <activity android:name=".controller.SelectServices" />
+        <activity android:name=".controller.ViewBooking" />
+        <activity android:name=".controller.ViewBooking2" />
+        <activity android:name=".controller.ClinicSearch" />
+        <activity android:name=".controller.AdminActivity" />
+        <activity android:name=".controller.AdminLogin" />
+        <activity android:name=".controller.MyDispatchActivity" />
+        <activity android:name=".controller.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PharmacyDetail" />
+        <activity android:name=".controller.PharmacyDetail" />
         <activity
-            android:name=".AdminNavigation"
+            android:name=".controller.AdminNavigation"
             android:label="@string/title_activity_admin_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".UserNavigation"
+            android:name=".controller.UserNavigation"
             android:label="UserNavigation"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".BookingDetails" />
-        <activity android:name=".QueueActivity" />
-        <activity android:name=".QueueDetails" />
+        <activity android:name=".controller.BookingDetails" />
+        <activity android:name=".controller.QueueActivity" />
+        <activity android:name=".controller.QueueDetails" />
 
         <service android:name="com.parse.PushService" />
         <receiver android:name="com.parse.ParseBroadcastReceiver">

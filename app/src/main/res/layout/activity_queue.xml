@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.priyanshu.health2u.QueueActivity">
+    tools:context=".controller.QueueActivity">
 
     <TextView
         android:id="@+id/clinic_name_tv"

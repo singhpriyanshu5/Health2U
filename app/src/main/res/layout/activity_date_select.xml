@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.priyanshu.health2u.DateSelect"
+    tools:context=".controller.DateSelect"
 >
 
     <LinearLayout
